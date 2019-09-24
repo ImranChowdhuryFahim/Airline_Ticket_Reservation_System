@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onMouseClicked="#female" prefHeight="618.0" prefWidth="1005.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
+   <children>
+      <Label layoutX="27.0" layoutY="14.0" prefHeight="46.0" prefWidth="154.0" text="Sign Up" textFill="SILVER">
+         <font>
+            <Font name="Arial Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="60.0" prefHeight="46.0" prefWidth="692.0" text="If you are already a member " textFill="SILVER">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="425.0" layoutY="60.0" mnemonicParsing="false" onAction="#sign_in" prefHeight="46.0" prefWidth="101.0" style="-fx-background-color: #25AAE2; -fx-font-size: 16;" text="Sign In">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label layoutX="13.0" layoutY="258.0" prefHeight="46.0" prefWidth="210.0" text="Username             :" textFill="SILVER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="304.0" prefHeight="46.0" prefWidth="220.0" text="Password               :" textFill="SILVER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="352.0" prefHeight="46.0" prefWidth="220.0" text="Confirm Password :" textFill="SILVER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="27.0" layoutY="558.0" mnemonicParsing="false" onAction="#sign_up" prefHeight="46.0" prefWidth="101.0" style="-fx-background-color: #25AAE2; -fx-font-size: 16;" text="Sign Up" />
+      <CheckBox fx:id="agr" layoutX="27.0" layoutY="502.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="363.0" text="I agree to all the terms and agreement" textFill="SILVER" />
+      <ImageView fx:id="userphoto" fitHeight="202.0" fitWidth="171.0" layoutX="820.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@profile_pic.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="855.0" layoutY="226.0" mnemonicParsing="false" onAction="#upload" prefHeight="46.0" prefWidth="101.0" style="-fx-background-color: #25AAE2; -fx-font-size: 16;" text="Upload" />
+      <Label layoutX="9.0" layoutY="398.0" prefHeight="46.0" prefWidth="220.0" style="-fx-font-size: 22;" text="Email                          :" textFill="SILVER" />
+      <Label layoutX="9.0" layoutY="444.0" prefHeight="56.0" prefWidth="220.0" style="-fx-font-size: 22;" text="Gender                       :" textFill="SILVER" />
+      <CheckBox fx:id="m" layoutX="237.0" layoutY="458.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="89.0" style="-fx-font-size: 18;" text="Male" textFill="SILVER" />
+      <CheckBox fx:id="f" layoutX="375.0" layoutY="458.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="101.0" style="-fx-font-size: 18;" text="Female" textFill="SILVER" />
+      <Label layoutX="14.0" layoutY="216.0" prefHeight="39.0" prefWidth="210.0" style="-fx-font-size: 22;" text="Date of Birth             :" textFill="SILVER" />
+      <Label layoutX="14.0" layoutY="136.0" prefHeight="39.0" prefWidth="210.0" style="-fx-font-size: 22;" text="First Name                :" textFill="SILVER" />
+      <Label layoutX="14.0" layoutY="175.0" prefHeight="39.0" prefWidth="210.0" style="-fx-font-size: 22;" text="Last Name                :" textFill="SILVER" />
+      <TextField fx:id="fname" layoutX="237.0" layoutY="143.0" prefHeight="26.0" prefWidth="220.0" promptText="John" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <TextField fx:id="lname" layoutX="237.0" layoutY="181.0" prefHeight="26.0" prefWidth="220.0" promptText="Doe" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <TextField fx:id="username" layoutX="237.0" layoutY="268.0" prefHeight="26.0" prefWidth="220.0" promptText="John23" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <TextField fx:id="email" layoutX="237.0" layoutY="408.0" prefHeight="26.0" prefWidth="220.0" promptText="John@gmail.com" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <DatePicker fx:id="date" layoutX="237.0" layoutY="223.0" promptText="12/12/2012" style="-fx-background-color: #29293D; -fx-border-color: #25AAE2;" />
+      <PasswordField fx:id="pass" layoutX="237.0" layoutY="314.0" promptText="Password" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <PasswordField fx:id="cpass" layoutX="237.0" layoutY="362.0" promptText="Confirm password" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+   </children>
+</AnchorPane>

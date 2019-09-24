@@ -5,14 +5,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.JSONObject;
+import java.io.FileReader;
+
 
 public class Main extends Application {
-
+    public static JSONObject jo;
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Jello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Object obj = new JSONParser().parse(new FileReader("userinfo.json"));
+        jo = (JSONObject) obj;
+        Parent root = FXMLLoader.load(getClass().getResource("log_in_page.fxml"));
+        primaryStage.setTitle("Login");
+        primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
     }
 
