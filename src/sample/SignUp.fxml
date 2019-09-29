@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane onMouseClicked="#female" prefHeight="618.0" prefWidth="1005.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
+<AnchorPane prefHeight="618.0" prefWidth="1005.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpController">
    <children>
       <Label layoutX="27.0" layoutY="14.0" prefHeight="46.0" prefWidth="154.0" text="Sign Up" textFill="SILVER">
          <font>
@@ -60,10 +60,34 @@
       <Label layoutX="14.0" layoutY="175.0" prefHeight="39.0" prefWidth="210.0" style="-fx-font-size: 22;" text="Last Name                :" textFill="SILVER" />
       <TextField fx:id="fname" layoutX="237.0" layoutY="143.0" prefHeight="26.0" prefWidth="220.0" promptText="John" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
       <TextField fx:id="lname" layoutX="237.0" layoutY="181.0" prefHeight="26.0" prefWidth="220.0" promptText="Doe" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
-      <TextField fx:id="username" layoutX="237.0" layoutY="268.0" prefHeight="26.0" prefWidth="220.0" promptText="John23" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
-      <TextField fx:id="email" layoutX="237.0" layoutY="408.0" prefHeight="26.0" prefWidth="220.0" promptText="John@gmail.com" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
-      <DatePicker fx:id="date" layoutX="237.0" layoutY="223.0" promptText="12/12/2012" style="-fx-background-color: #29293D; -fx-border-color: #25AAE2;" />
-      <PasswordField fx:id="pass" layoutX="237.0" layoutY="314.0" promptText="Password" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
-      <PasswordField fx:id="cpass" layoutX="237.0" layoutY="362.0" promptText="Confirm password" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <TextField fx:id="username" layoutX="237.0" layoutY="268.0" onKeyReleased="#usrvalidation" prefHeight="26.0" prefWidth="220.0" promptText="John23" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <TextField fx:id="email" layoutX="237.0" layoutY="408.0" onKeyReleased="#emailvalidation" prefHeight="26.0" prefWidth="220.0" promptText="John@gmail.com" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <DatePicker fx:id="date" layoutX="237.0" layoutY="223.0" prefHeight="28.0" prefWidth="220.0" promptText="12/12/2012" style="-fx-background-color: #29293D; -fx-border-color: #25AAE2;" />
+      <PasswordField fx:id="pass" layoutX="237.0" layoutY="314.0" onKeyReleased="#passvalidation" prefHeight="27.0" prefWidth="220.0" promptText="Password" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <PasswordField fx:id="cpass" layoutX="237.0" layoutY="362.0" onKeyReleased="#cpassvalidation" prefHeight="27.0" prefWidth="220.0" promptText="Confirm password" style="-fx-text-inner-color: #B2B2B2; -fx-border-color: #25AAE2; -fx-background-color: #29293D; -fx-border-width: 0 0 1 0;" />
+      <Label fx:id="passvalid" layoutX="464.0" layoutY="320.0" prefHeight="16.0" prefWidth="210.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="cpassvalid" layoutX="464.0" layoutY="366.0" prefHeight="16.0" prefWidth="210.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailvallid" layoutX="464.0" layoutY="412.0" prefHeight="16.0" prefWidth="210.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="usrvalid" layoutX="464.0" layoutY="272.0" prefHeight="16.0" prefWidth="210.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="emaildone" fitHeight="28.0" fitWidth="33.0" layoutX="431.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="cpassdone" fitHeight="28.0" fitWidth="33.0" layoutX="431.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="passdone" fitHeight="28.0" fitWidth="33.0" layoutX="431.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="usrdone" fitHeight="28.0" fitWidth="33.0" layoutX="431.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

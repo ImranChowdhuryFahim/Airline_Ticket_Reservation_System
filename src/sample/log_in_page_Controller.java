@@ -34,10 +34,12 @@ public class log_in_page_Controller {
     public static JSONArray j;
     public static Image emg=null;
     public static String username=null;
+    public  static  JSONObject obj=null;
+    public  static  Object[] d;
     @FXML
     void login(ActionEvent event) throws ParseException, IOException ,FileNotFoundException{
         Object o = new JSONParser().parse(new FileReader("userinfo.json"));
-        JSONObject obj = (JSONObject) o;
+        obj = (JSONObject) o;
         username=user.getText();
         j= (JSONArray) obj.get(username);
         File fl=new File((String) j.get(7));
@@ -66,7 +68,10 @@ public class log_in_page_Controller {
     }
 
     @FXML
-    void sign_up(ActionEvent event) throws IOException {
+    void sign_up(ActionEvent event) throws IOException, ParseException {
+        Object o = new JSONParser().parse(new FileReader("userinfo.json"));
+        obj = (JSONObject) o;
+        d= obj.keySet().toArray();
         Parent n= FXMLLoader.load(getClass().getResource("SignUp.fxml"));
         Scene n1=new Scene(n);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();

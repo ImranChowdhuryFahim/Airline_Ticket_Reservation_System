@@ -6,13 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.json.simple.JSONArray;
@@ -21,6 +20,10 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Set;
+import java.util.regex.Pattern;
 
 public class SignUpController {
     @FXML
@@ -65,9 +68,29 @@ public class SignUpController {
     private DatePicker date;
 
     @FXML
-    void female(MouseEvent event) {
+    private Label passvalid;
 
-    }
+    @FXML
+    private Label cpassvalid;
+
+    @FXML
+    private Label emailvallid;
+
+    @FXML
+    private Label usrvalid;
+
+    @FXML
+    private ImageView emaildone;
+
+    @FXML
+    private ImageView cpassdone;
+
+    @FXML
+    private ImageView passdone;
+
+    @FXML
+    private ImageView usrdone;
+
 
     @FXML
     void sign_in(ActionEvent event) throws IOException {
@@ -77,6 +100,84 @@ public class SignUpController {
         window.setTitle("Login");
         window.setScene(n1);
         window.show();
+
+    }
+
+    public static boolean isValid(String email)
+    {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+                "[a-zA-Z0-9_+&*-]+)*@" +
+                "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+                "A-Z]{2,7}$";
+
+        Pattern pat = Pattern.compile(emailRegex);
+        if (email == null)
+            return false;
+        return pat.matcher(email).matches();
+    }
+
+    @FXML
+    void emailvalidation(KeyEvent event) {
+        if(isValid(email.getText()))
+        {
+            emailvallid.setText("");
+            Image img=new Image("sample/add.png");
+            emaildone.setImage(img);
+
+        }
+        else {
+            emaildone.setImage(null);
+            emailvallid.setText("Invalid Email");
+            emailvallid.setTextFill(Paint.valueOf("crimson"));
+        }
+
+    }
+
+    @FXML
+    void passvalidation(KeyEvent event) {
+   if(pass.getText().length()>=8){
+       passvalid.setText("");
+       Image img=new Image("sample/add.png");
+       passdone.setImage(img);
+
+   }
+   else{
+       passdone.setImage(null);
+       passvalid.setText("Invalid");
+       passvalid.setTextFill(Paint.valueOf("crimson"));
+   }
+
+    }
+
+    @FXML
+    void usrvalidation(KeyEvent event) {
+        if(Arrays.asList(log_in_page_Controller.d).contains(username.getText()))
+        {
+            usrdone.setImage(null);
+            usrvalid.setText("Username already exists");
+            usrvalid.setTextFill(Paint.valueOf("crimson"));
+        }
+        else{
+            usrvalid.setText("");
+            Image img=new Image("sample/add.png");
+            usrdone.setImage(img);
+        }
+
+    }
+
+    @FXML
+    void cpassvalidation(KeyEvent event) {
+        if(pass.getText().equals(cpass.getText()))
+        {
+            cpassvalid.setText("");
+            Image img=new Image("sample/add.png");
+            cpassdone.setImage(img);
+        }
+        else {
+            cpassdone.setImage(null);
+            cpassvalid.setText("Not Matched");
+            cpassvalid.setTextFill(Paint.valueOf("crimson"));
+        }
 
     }
 
