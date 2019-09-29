@@ -121,7 +121,7 @@ public class SignUpController {
         if(isValid(email.getText()))
         {
             emailvallid.setText("");
-            Image img=new Image("sample/add.png");
+            Image img=new Image("sample/tick1.png");
             emaildone.setImage(img);
 
         }
@@ -137,7 +137,7 @@ public class SignUpController {
     void passvalidation(KeyEvent event) {
    if(pass.getText().length()>=8){
        passvalid.setText("");
-       Image img=new Image("sample/add.png");
+       Image img=new Image("sample/tick1.png");
        passdone.setImage(img);
 
    }
@@ -159,7 +159,7 @@ public class SignUpController {
         }
         else{
             usrvalid.setText("");
-            Image img=new Image("sample/add.png");
+            Image img=new Image("sample/tick1.png");
             usrdone.setImage(img);
         }
 
@@ -170,7 +170,7 @@ public class SignUpController {
         if(pass.getText().equals(cpass.getText()))
         {
             cpassvalid.setText("");
-            Image img=new Image("sample/add.png");
+            Image img=new Image("sample/tick1.png");
             cpassdone.setImage(img);
         }
         else {
