@@ -19,6 +19,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import javax.swing.plaf.synth.SynthTextAreaUI;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -30,7 +31,7 @@ public class SignUpController {
     private CheckBox f;
 
     @FXML
-    private CheckBox agr;
+    private CheckBox isAgreed;
 
 
     @FXML
@@ -135,17 +136,40 @@ public class SignUpController {
 
     @FXML
     void passvalidation(KeyEvent event) {
-   if(pass.getText().length()>=8){
-       passvalid.setText("");
-       Image img=new Image("sample/tick1.png");
-       passdone.setImage(img);
 
-   }
-   else{
-       passdone.setImage(null);
-       passvalid.setText("Invalid");
-       passvalid.setTextFill(Paint.valueOf("crimson"));
-   }
+        String Password = pass.getText().toString();
+        String UpperCaseCharacters = "(.*[A-Z].*)";
+        String lowerCaseCharacters = "(.*[a-z].*)";
+        String SpecialCharacters = "(.*[,~,!,@,#,$,%,^,&,*,(,),-,_,=,+,[,{,],},|,;,:,<,>,/,?].*)";
+        String Numbers = "(.*[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].*)";
+        if(Password.isEmpty()){
+            passvalid.setText("");
+        }
+        else if(!Password.matches(Numbers)){
+            passvalid.setText("Password must contain at least one number");
+            passvalid.setTextFill(Paint.valueOf("crimson"));
+        }
+        else if(!Password.matches(lowerCaseCharacters)){
+            passvalid.setText("Password must contain at least one lower case letter");
+            passvalid.setTextFill(Paint.valueOf("crimson"));
+        }
+        else if(!Password.matches(UpperCaseCharacters)){
+            passvalid.setText("Password must contain at least one Upper-Case characters");
+            passvalid.setTextFill(Paint.valueOf("crimson"));
+        }
+        else if(!Password.matches(SpecialCharacters)){
+            passvalid.setText("Your password must contain at least one Special Character");
+            passvalid.setTextFill(Paint.valueOf("crimson"));
+        }
+        else if(Password.length() != 8){
+            passvalid.setText("Password must be of 8 characters");
+            passvalid.setTextFill(Paint.valueOf("crimson"));
+        }
+        else{
+            passvalid.setText("");
+            Image img = new Image("sample/tick1.png");
+            passdone.setImage(img);
+        }
 
     }
 
@@ -200,7 +224,7 @@ public class SignUpController {
 
     @FXML
     void sign_up(ActionEvent event) throws IOException, ParseException {
-        if(agr.isSelected()) {
+        if(isAgreed.isSelected()) {
             Object o = new JSONParser().parse(new FileReader("userinfo.json"));
             JSONObject obj = (JSONObject) o;
             JSONArray j = new JSONArray();
