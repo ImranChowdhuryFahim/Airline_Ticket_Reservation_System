@@ -162,12 +162,12 @@ public class SignUpController {
             passdone.setImage(null);
         }
         else if(!Password.matches(UpperCaseCharacters)){
-            passvalid.setText("Password must contain at least one Upper-Case characters");
+            passvalid.setText("Password must contain at least one Upper-Case character");
             passvalid.setTextFill(Paint.valueOf("crimson"));
             passdone.setImage(null);
         }
         else if(!Password.matches(SpecialCharacters)){
-            passvalid.setText("Your password must contain at least one Special Character");
+            passvalid.setText("Password must contain at least one Special Character");
             passvalid.setTextFill(Paint.valueOf("crimson"));
             passdone.setImage(null);
         }
