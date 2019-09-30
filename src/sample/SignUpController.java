@@ -119,7 +119,12 @@ public class SignUpController {
 
     @FXML
     void emailvalidation(KeyEvent event) {
-        if(isValid(email.getText()))
+        if(email.getText().isEmpty())
+        {
+            emailvallid.setText("");
+            emaildone.setImage(null);
+        }
+        else if(isValid(email.getText()))
         {
             emailvallid.setText("");
             Image img=new Image("sample/tick1.png");
@@ -144,28 +149,34 @@ public class SignUpController {
         String Numbers = "(.*[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].*)";
         if(Password.isEmpty()){
             passvalid.setText("");
+            passdone.setImage(null);
         }
         else if(!Password.matches(Numbers)){
             passvalid.setText("Password must contain at least one number");
             passvalid.setTextFill(Paint.valueOf("crimson"));
+            passdone.setImage(null);
         }
         else if(!Password.matches(lowerCaseCharacters)){
             passvalid.setText("Password must contain at least one lower case letter");
             passvalid.setTextFill(Paint.valueOf("crimson"));
+            passdone.setImage(null);
         }
         else if(!Password.matches(UpperCaseCharacters)){
             passvalid.setText("Password must contain at least one Upper-Case characters");
             passvalid.setTextFill(Paint.valueOf("crimson"));
+            passdone.setImage(null);
         }
         else if(!Password.matches(SpecialCharacters)){
             passvalid.setText("Your password must contain at least one Special Character");
             passvalid.setTextFill(Paint.valueOf("crimson"));
+            passdone.setImage(null);
         }
         else if(Password.length() != 8){
             passvalid.setText("Password must be of 8 characters");
             passvalid.setTextFill(Paint.valueOf("crimson"));
+            passdone.setImage(null);
         }
-        else{
+        else if(Password.length()==8){
             passvalid.setText("");
             Image img = new Image("sample/tick1.png");
             passdone.setImage(img);
@@ -175,7 +186,12 @@ public class SignUpController {
 
     @FXML
     void usrvalidation(KeyEvent event) {
-        if(Arrays.asList(log_in_page_Controller.d).contains(username.getText()))
+        if(username.getText().isEmpty()){
+            usrdone.setImage(null);
+            usrvalid.setText("");
+
+        }
+        else if(Arrays.asList(log_in_page_Controller.d).contains(username.getText()))
         {
             usrdone.setImage(null);
             usrvalid.setText("Username already exists");
@@ -191,7 +207,12 @@ public class SignUpController {
 
     @FXML
     void cpassvalidation(KeyEvent event) {
-        if(pass.getText().equals(cpass.getText()))
+        if(cpass.getText().isEmpty())
+        {
+            cpassvalid.setText("");
+            cpassdone.setImage(null);
+        }
+        else if(pass.getText().equals(cpass.getText()))
         {
             cpassvalid.setText("");
             Image img=new Image("sample/tick1.png");
