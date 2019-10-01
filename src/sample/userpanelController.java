@@ -4,13 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,33 +18,40 @@ public class userpanelController implements Initializable {
     private Label name;
 
     @FXML
-    private Label username;
+    private Label usrname;
 
     @FXML
-    private Label email;
+    private Label mail;
 
     @FXML
-    void button(ActionEvent event) throws FileNotFoundException {
-       name.setText((String) log_in_page_Controller.j.get(0));
-//        File fl=new File((String) log_in_page_Controller.j.get(7));
-//        Image emg= null;
-//        try {
-//            emg=new Image(new FileInputStream(fl));
-//        }
-//        catch (FileNotFoundException e)
-//        {
-//
-//        }
-//        img.setImage(emg);
+    private Label pst;
 
+    @FXML
+    private Label upflight;
+
+    @FXML
+    private Label deptime;
+
+    @FXML
+    void bookflight(ActionEvent event) {
+
+    }
+
+    @FXML
+    void logout(ActionEvent event) {
+
+    }
+
+    @FXML
+    void updatepic(ActionEvent event) {
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        name.setText((String) log_in_page_Controller.j.get(0));
-        email.setText((String) log_in_page_Controller.j.get(6));
-        username.setText(log_in_page_Controller.username);
+        name.setText((String) log_in_page_Controller.j.get(0)+" "+(String)log_in_page_Controller.j.get(1));
+        usrname.setText((log_in_page_Controller.username));
+        mail.setText((String) log_in_page_Controller.j.get(6));
         img.setImage(log_in_page_Controller.emg);
 
     }
