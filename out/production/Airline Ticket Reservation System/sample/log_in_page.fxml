@@ -66,5 +66,6 @@
             <Image url="@key.png" />
          </image>
       </ImageView>
+      <Button layoutX="248.0" layoutY="428.0" mnemonicParsing="false" onAction="#adminlogin" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: #29293D; -fx-text-fill: #25AAE2;" text="Admin Login" />
    </children>
 </AnchorPane>

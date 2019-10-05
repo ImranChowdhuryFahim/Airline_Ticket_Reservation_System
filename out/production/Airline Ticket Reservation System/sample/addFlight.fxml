@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #29292D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddFlight">
+   <children>
+      <VBox prefHeight="350.0" prefWidth="200.0">
+         <children>
+            <Label text="Flight No :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="60.0" layoutY="30.0" text="Flight Name :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="51.0" text="Source :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="72.0" text="Destination :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="93.0" text="Departure Time :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="114.0" text="Arival TIme :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="135.0" text="Fare :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="60.0" layoutY="276.0" text="Class :" textFill="#4f67eb">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="50.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="200.0" prefHeight="350.0" prefWidth="249.0">
+         <children>
+            <TextField fx:id="fno" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="fname" layoutX="10.0" layoutY="30.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="src" layoutX="10.0" layoutY="56.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="dest" layoutX="10.0" layoutY="82.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="depttime" layoutX="10.0" layoutY="108.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="arrtime" layoutX="10.0" layoutY="134.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="fare" layoutX="10.0" layoutY="160.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <ChoiceBox fx:id="choisebox" prefHeight="25.0" prefWidth="255.0" stylesheets="@addflight.css">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin></ChoiceBox>
+         </children></VBox>
+      <Button layoutX="259.0" layoutY="384.0" mnemonicParsing="false" onAction="#add" prefHeight="39.0" prefWidth="83.0" style="-fx-background-color: #25AAE2; -fx-background-radius: 20;" text="Add">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

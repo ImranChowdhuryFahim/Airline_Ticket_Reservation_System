@@ -1,0 +1,14 @@
+.choice-box {
+-fx-background-color:  #4f67eb;
+-fx-background-radius: 20;
+
+}
+
+.choice-box .context-menu{
+     -fx-background-color:  #29292D;
+
+}
+.choice-box .menu-item > .label { -fx-text-fill: white;
+-fx-font-size: 25px;
+}
+.choice-box .menu-item:focused { -fx-background-color: orange; }

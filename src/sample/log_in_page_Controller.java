@@ -58,9 +58,8 @@ public class log_in_page_Controller {
             Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
             window.setTitle("Profile");
             window.setScene(n1);
-            //userpanelController.name.setText((String) j.get(0));
             window.show();
-          //  System.out.println("hello");
+
         }
 
 
@@ -73,6 +72,18 @@ public class log_in_page_Controller {
         obj = (JSONObject) o;
         d= obj.keySet().toArray();
         Parent n= FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+        Scene n1=new Scene(n);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setTitle("SignUp");
+        window.setScene(n1);
+        window.show();
+
+    }
+
+    @FXML
+    void adminlogin(ActionEvent event) throws IOException {
+
+        Parent n= FXMLLoader.load(getClass().getResource("adminPanel.fxml"));
         Scene n1=new Scene(n);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("SignUp");
