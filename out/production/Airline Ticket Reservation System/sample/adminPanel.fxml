@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminPanelController">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.adminPanelController">
     <children>
-        <VBox prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #29293D;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: #29496D;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <Label prefHeight="51.0" prefWidth="270.0" style="-fx-background-color: #24ACF2;" text="Admin Panel">
                     <font>
