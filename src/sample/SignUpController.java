@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -20,6 +22,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import javax.swing.plaf.synth.SynthTextAreaUI;
+import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -269,9 +272,13 @@ public class SignUpController {
             System.out.println(obj);
 
             try (FileWriter jfw = new FileWriter("userinfo.json")) {
-
                 jfw.write(obj.toJSONString());
                 jfw.flush();
+                Toolkit.getDefaultToolkit().beep();
+                Alert SignUp=new Alert(Alert.AlertType.INFORMATION);
+                SignUp.setHeaderText("SignUp");
+                SignUp.setContentText("Your account has been created  successfully please sign up");
+                SignUp.show();
             } catch (IOException e) {
 
             }

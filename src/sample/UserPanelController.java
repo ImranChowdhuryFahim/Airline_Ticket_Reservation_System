@@ -13,6 +13,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -43,6 +44,7 @@ public class UserPanelController implements Initializable {
 
     @FXML
     void logout(ActionEvent event) throws IOException {
+        Toolkit.getDefaultToolkit().beep();
         Alert Logout=new Alert(Alert.AlertType.CONFIRMATION);
         Logout.setContentText("Are you sure?");
         Logout.setHeaderText("Logout");
