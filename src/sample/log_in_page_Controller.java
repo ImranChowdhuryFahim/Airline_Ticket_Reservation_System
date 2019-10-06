@@ -53,7 +53,7 @@ public class log_in_page_Controller {
 
         if(password.getText().equals(j.get(5)))
         {
-            Parent n= FXMLLoader.load(getClass().getResource("userpanel.fxml"));
+            Parent n= FXMLLoader.load(getClass().getResource("user__Panel.fxml"));
             Scene n1=new Scene(n);
             Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
             window.setTitle("Profile");
