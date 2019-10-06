@@ -7,11 +7,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,12 +43,26 @@ public class UserPanelController implements Initializable {
 
     @FXML
     void logout(ActionEvent event) throws IOException {
-        Parent n= FXMLLoader.load(getClass().getResource("log_in_page.fxml"));
-        Scene n1=new Scene(n);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setTitle("Login");
-        window.setScene(n1);
-        window.show();
+        Alert Logout=new Alert(Alert.AlertType.CONFIRMATION);
+        Logout.setContentText("Are you sure?");
+        Logout.setHeaderText("Logout");
+        ButtonType yes=new ButtonType("Yes");
+        ButtonType no=new ButtonType("NO", ButtonData.CANCEL_CLOSE);
+        Logout.getButtonTypes().setAll(yes,no);
+        Optional<ButtonType> result = Logout.showAndWait();
+        if (result.get() == yes){
+
+            Parent n= FXMLLoader.load(getClass().getResource("log_in_page.fxml"));
+            Scene n1=new Scene(n);
+            Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+            window.setTitle("Login");
+            window.setScene(n1);
+            window.show();
+
+        } else {
+
+        }
+
 
 
     }

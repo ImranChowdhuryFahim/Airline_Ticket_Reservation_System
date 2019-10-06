@@ -58,28 +58,37 @@ public class userinfoController  implements Initializable {
             e.printStackTrace();
         }
         JSONObject obj = (JSONObject) o;
-        JSONArray j = (JSONArray) obj.get(log_in_page_Controller.username);
-
-
-        name.setText((String) j.get(0)+" "+(String)j.get(1));
+        JSONArray j=null;
         if(update_user_info.updatedname==null){
-            usrname.setText((log_in_page_Controller.username));}
-        else {
-            usrname.setText((update_user_info.updatedname));
+            j = (JSONArray) obj.get(log_in_page_Controller.username);}
+        else{
+            j=(JSONArray) obj.get(update_user_info.updatedname);
         }
-        mail.setText((String) j.get(6));
-        Image emg=null;
-        try {
-            emg = new Image(new FileInputStream(j.get(7).toString()));
-        }
-        catch (FileNotFoundException e)
-        {
 
+
+        if(j!=null) {
+            name.setText((String) j.get(0) + " " + (String) j.get(1));
+            if (update_user_info.updatedname == null) {
+                usrname.setText((log_in_page_Controller.username));
+            } else {
+                usrname.setText((update_user_info.updatedname));
+            }
+            mail.setText((String) j.get(6));
+            Image emg = null;
+            try {
+                if (j.get(7) != null) {
+                    emg = new Image(new FileInputStream(j.get(7).toString()));
+                }
+            } catch (FileNotFoundException e) {
+
+            }
+            if (emg != null) {
+                img.setImage(emg);
+            }
+            upflight.setText("Null");
+            deptime.setText("Null");
+            pst.setText("Null");
         }
-        img.setImage(emg);
-        upflight.setText("Null");
-        deptime.setText("Null");
-        pst.setText("Null");
 
     }
 }

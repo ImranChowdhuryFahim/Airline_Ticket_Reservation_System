@@ -255,7 +255,12 @@ public class SignUpController {
 
             j.add(3, pass.getText());
             j.add(4, email.getText());
-            j.add(5, fl.toString());
+            if(fl==null){
+                j.add(5,null);
+
+            }
+            else
+            {j.add(5, fl.toString());}
             if (m.isSelected()) j.add(6, m.getText());
             else if (f.isSelected()) j.add(6, f.getText());
 
@@ -264,6 +269,7 @@ public class SignUpController {
             System.out.println(obj);
 
             try (FileWriter jfw = new FileWriter("userinfo.json")) {
+
                 jfw.write(obj.toJSONString());
                 jfw.flush();
             } catch (IOException e) {
