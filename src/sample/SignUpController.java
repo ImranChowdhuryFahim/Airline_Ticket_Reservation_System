@@ -26,6 +26,7 @@ import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 
@@ -247,7 +248,7 @@ public class SignUpController {
     }
 
     @FXML
-    void sign_up(ActionEvent event) throws IOException, ParseException {
+    void sign_up(ActionEvent event) throws IOException, ParseException,FileNotFoundException {
         if(isAgreed.isSelected()) {
             Object o = new JSONParser().parse(new FileReader("userinfo.json"));
             JSONObject obj = (JSONObject) o;
@@ -277,8 +278,19 @@ public class SignUpController {
                 Toolkit.getDefaultToolkit().beep();
                 Alert SignUp=new Alert(Alert.AlertType.INFORMATION);
                 SignUp.setHeaderText("SignUp");
-                SignUp.setContentText("Your account has been created  successfully please sign up");
-                SignUp.show();
+                SignUp.setContentText("Your account has been created  successfully please login");
+                Optional<ButtonType> result = SignUp.showAndWait();
+                if (result.get() == ButtonType.OK){
+                    Parent n= FXMLLoader.load(getClass().getResource("log_in_page.fxml"));
+                    Scene n1=new Scene(n);
+                    Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+                    window.setTitle("SignUp");
+                    window.setScene(n1);
+                    window.show();
+                } else {
+
+                }
+
             } catch (IOException e) {
 
             }
