@@ -76,11 +76,11 @@ public class update_user_info implements Initializable {
         try (FileWriter jfw = new FileWriter("userinfo.json")) {
             jfw.write(obj.toJSONString());
             jfw.flush();
-//            Toolkit.getDefaultToolkit().beep();
-//            JOptionPane optionPane = new JOptionPane("User Info has been Updated successfully");
-//            JDialog dialog = optionPane.createDialog("Message");
-//            dialog.setAlwaysOnTop(true);
-//            dialog.setVisible(true);
+            Toolkit.getDefaultToolkit().beep();
+            JOptionPane optionPane = new JOptionPane("User Info has been Updated successfully");
+            JDialog dialog = optionPane.createDialog("Message");
+            dialog.setAlwaysOnTop(true);
+            dialog.setVisible(true);
         } catch (IOException e) {
 
         }
