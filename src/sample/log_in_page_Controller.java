@@ -41,18 +41,26 @@ public class log_in_page_Controller {
         Object o = new JSONParser().parse(new FileReader("userinfo.json"));
         obj = (JSONObject) o;
         username=user.getText();
+        String Checkpass=null;
         j= (JSONArray) obj.get(username);
-        File fl=new File((String) j.get(7));
-        try{
-            emg=new Image(new FileInputStream(fl));
+        if(j!=null) {
+            File fl = null;
+            if (j.get(7) != null) {
+                fl = new File((String) j.get(7));
+            }
+            try {
+                if (fl != null) {
+                    emg = new Image(new FileInputStream(fl));
+                }
+            } catch (FileNotFoundException e) {
+
+            }
+            Checkpass= (String) j.get(5);
         }
-        catch (FileNotFoundException e)
+
+        if(password.getText().equals(Checkpass))
         {
 
-        }
-
-        if(password.getText().equals(j.get(5)))
-        {
             Parent n= FXMLLoader.load(getClass().getResource("user__Panel.fxml"));
             Scene n1=new Scene(n);
             Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
@@ -60,6 +68,10 @@ public class log_in_page_Controller {
             window.setScene(n1);
             window.show();
 
+
+        }
+        else{
+            System.out.println("hello");
         }
 
 

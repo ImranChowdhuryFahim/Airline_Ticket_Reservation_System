@@ -3,6 +3,7 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -77,10 +78,10 @@ public class update_user_info implements Initializable {
             jfw.write(obj.toJSONString());
             jfw.flush();
             Toolkit.getDefaultToolkit().beep();
-            JOptionPane optionPane = new JOptionPane("User Info has been Updated successfully");
-            JDialog dialog = optionPane.createDialog("Message");
-            dialog.setAlwaysOnTop(true);
-            dialog.setVisible(true);
+            Alert update=new Alert(Alert.AlertType.INFORMATION);
+            update.setHeaderText("UPDATE");
+            update.setContentText("Information has been updated successfully");
+            update.show();
         } catch (IOException e) {
 
         }
@@ -92,25 +93,60 @@ public class update_user_info implements Initializable {
     void updatepic(ActionEvent event) {
 
         FileChooser fc=new FileChooser();
+        Button button = new Button("Select File");
         fl=fc.showOpenDialog(null);
         Image emg=null;
         try {
-            emg = new Image(new FileInputStream(fl));
+            if(fl!=null){
+            emg = new Image(new FileInputStream(fl));}
         }
         catch (FileNotFoundException e)
         {
 
         }
-        img.setImage(emg);
+        if(emg!=null){
+        img.setImage(emg);}
 
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        fname.setText((String) log_in_page_Controller.j.get(0));
-        lname.setText((String) log_in_page_Controller.j.get(1));
-        username.setText(log_in_page_Controller.username);
-        img.setImage(log_in_page_Controller.emg);
+        Object o = null;
+        try {
+            o = new JSONParser().parse(new FileReader("userinfo.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        JSONObject obj = (JSONObject) o;
+        JSONArray j = null;
+        if (updatedname == null) {
+            j = (JSONArray) obj.get(log_in_page_Controller.username);
+        } else {
+            j = (JSONArray) obj.get(updatedname);
+        }
+        if (j != null) {
+            fname.setText((String) j.get(0));
+            lname.setText((String) j.get(1));
+            if (updatedname == null) {
+                username.setText(log_in_page_Controller.username);
+            } else {
+                username.setText(updatedname);
+            }
 
+            Image emg = null;
+            try {
+                if (j.get(7) != null) {
+                    emg = new Image(new FileInputStream(j.get(7).toString()));
+                }
+            } catch (FileNotFoundException e) {
+
+            }
+            if (emg != null) {
+                img.setImage(emg);
+            }
+
+        }
     }
 }

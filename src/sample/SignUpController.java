@@ -7,6 +7,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -20,9 +22,11 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import javax.swing.plaf.synth.SynthTextAreaUI;
+import java.awt.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Optional;
 import java.util.Set;
 import java.util.regex.Pattern;
 
@@ -244,7 +248,7 @@ public class SignUpController {
     }
 
     @FXML
-    void sign_up(ActionEvent event) throws IOException, ParseException {
+    void sign_up(ActionEvent event) throws IOException, ParseException,FileNotFoundException {
         if(isAgreed.isSelected()) {
             Object o = new JSONParser().parse(new FileReader("userinfo.json"));
             JSONObject obj = (JSONObject) o;
@@ -255,7 +259,12 @@ public class SignUpController {
 
             j.add(3, pass.getText());
             j.add(4, email.getText());
-            j.add(5, fl.toString());
+            if(fl==null){
+                j.add(5,null);
+
+            }
+            else
+            {j.add(5, fl.toString());}
             if (m.isSelected()) j.add(6, m.getText());
             else if (f.isSelected()) j.add(6, f.getText());
 
@@ -266,6 +275,22 @@ public class SignUpController {
             try (FileWriter jfw = new FileWriter("userinfo.json")) {
                 jfw.write(obj.toJSONString());
                 jfw.flush();
+                Toolkit.getDefaultToolkit().beep();
+                Alert SignUp=new Alert(Alert.AlertType.INFORMATION);
+                SignUp.setHeaderText("SignUp");
+                SignUp.setContentText("Your account has been created  successfully please login");
+                Optional<ButtonType> result = SignUp.showAndWait();
+                if (result.get() == ButtonType.OK){
+                    Parent n= FXMLLoader.load(getClass().getResource("log_in_page.fxml"));
+                    Scene n1=new Scene(n);
+                    Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+                    window.setTitle("SignUp");
+                    window.setScene(n1);
+                    window.show();
+                } else {
+
+                }
+
             } catch (IOException e) {
 
             }
