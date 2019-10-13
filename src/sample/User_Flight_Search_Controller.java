@@ -1,14 +1,24 @@
 package sample;
 
+import com.sun.javaws.jnl.JARDesc;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import org.controlsfx.control.textfield.TextFields;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -27,6 +37,7 @@ import java.util.ResourceBundle;
 
 public class User_Flight_Search_Controller implements Initializable {
 
+    public  static ObservableList<String>  ResultsOfSearch = FXCollections.observableArrayList();
     @FXML
     private Text warningbesidesFrom;
 
@@ -52,11 +63,32 @@ public class User_Flight_Search_Controller implements Initializable {
     private TextField To;
 
 
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        Object obj = null;
+        try {
+            obj = new JSONParser().parse(new FileReader("flightinfo.json"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        int i = 0;
+        JSONArray JArray = (JSONArray) obj;
+        String[] AllPossibleFrom = new String[JArray.size()], AllPossibleTo = new String[JArray.size()];
+
+        for(Object x: JArray){
+            JSONObject JsonObject = (JSONObject) x;
+            AllPossibleFrom[i] = JsonObject.get("Source").toString();
+            AllPossibleTo[i] = JsonObject.get("Destination").toString();
+
+            i++;
+        }
         SeatClassChoisebox.getItems().addAll("Economy","Business","First Class");
-
-
+        TextFields.bindAutoCompletion(From, AllPossibleFrom);
+        TextFields.bindAutoCompletion(To, AllPossibleTo);
     }
 
     int TestTheSearchValidity(String From, String To){
@@ -121,13 +153,21 @@ public class User_Flight_Search_Controller implements Initializable {
 
            // System.out.println(JtempObject);
         }
-
+        int j = 0;
         Collections.sort(PossibleFlight);
         for(Flight x: PossibleFlight){
+            ResultsOfSearch.add(x.getFlightName() + "                 " + x.getFare() + "$");
             System.out.println( ++cnt + "." + x.getFlightName() + "         " + "Fare: " + x .getFare());
         }
 
+        Parent n= FXMLLoader.load(getClass().getResource("Search_Result.fxml"));
+        Scene n1=new Scene(n);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setTitle("Profile");
+        window.setScene(n1);
+        window.show();
     }
+
 
 
 }
