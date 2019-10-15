@@ -20,13 +20,10 @@ public class Flight implements Comparable<Flight> {
         {
             return FlightName;
         }
-
-
-
-
-        public Integer getFare(){
-            return fare;
-        }
+        public String getFrom() {return To;}
+        public String getTo() {return From;}
+        public String getDepartureTime() {return DepartureTime;}
+        public Integer getFare(){ return fare; }
 
 
     @Override

@@ -156,7 +156,7 @@ public class User_Flight_Search_Controller implements Initializable {
         int j = 0;
         Collections.sort(PossibleFlight);
         for(Flight x: PossibleFlight){
-            ResultsOfSearch.add(x.getFlightName() + "                 " + x.getFare() + "$");
+            ResultsOfSearch.add(x.getFrom() + "-" + x.getTo() + "         Flight Name: " + x.getFlightName() + "         Fare: " + x.getFare() + "$");
             System.out.println( ++cnt + "." + x.getFlightName() + "         " + "Fare: " + x .getFare());
         }
 
