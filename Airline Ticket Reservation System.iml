@@ -11,5 +11,7 @@
     <orderEntry type="library" name="controlsfx-8.40.15" level="project" />
     <orderEntry type="library" name="json-simple-1.11" level="project" />
     <orderEntry type="library" name="controlsfx-8.40.10" level="project" />
+    <orderEntry type="library" name="controlsfx-8.40.151" level="project" />
+    <orderEntry type="library" name="json-simple-1.12" level="project" />
   </component>
 </module>
