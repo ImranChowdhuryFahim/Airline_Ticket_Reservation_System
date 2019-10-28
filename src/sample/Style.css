@@ -8,4 +8,11 @@
 .button:focused{
    -fx-background-color :  #29292D;
 }
+.image{
+  -fx-background-color : none;
+}
+.text-field{
+  -fx-background-color : none;
+}
+
 

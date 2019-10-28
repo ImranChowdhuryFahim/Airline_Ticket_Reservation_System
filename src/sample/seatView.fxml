@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="493.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="493.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.seatViewController">
    <children>
-      <TextField editable="false" layoutX="66.0" layoutY="9.0" prefHeight="79.0" prefWidth="330.0" style="-fx-background-color: none;" text="    Select Your Seat">
+      <TextField editable="false" layoutX="66.0" layoutY="9.0" prefHeight="79.0" prefWidth="380.0" style="-fx-background-color: none;" text="    Select Your Seat">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </TextField>
-      <TextField editable="false" layoutX="29.0" layoutY="153.0" prefHeight="62.0" prefWidth="98.0" style="-fx-background-color: none;" text="Available:">
+      <TextField editable="false" layoutX="29.0" layoutY="153.0" prefHeight="62.0" prefWidth="111.0" style="-fx-background-color: none;" text="Available:">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -24,7 +23,7 @@
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
       </ImageView>
-      <TextField editable="false" layoutX="266.0" layoutY="160.0" prefHeight="48.0" prefWidth="120.0" style="-fx-background-color: none;" text="Unavailable:">
+      <TextField editable="false" layoutX="266.0" layoutY="160.0" prefHeight="48.0" prefWidth="139.0" style="-fx-background-color: none;" text="Unavailable:">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -34,7 +33,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <TextField editable="false" layoutX="152.0" layoutY="88.0" prefHeight="62.0" prefWidth="98.0" style="-fx-background-color: none;" text="Selected:">
+      <TextField editable="false" layoutX="152.0" layoutY="88.0" prefHeight="62.0" prefWidth="120.0" style="-fx-background-color: none;" text="Selected:">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -44,12 +43,12 @@
             <Image url="@icons8-theatre-seat-80_black.png" />
          </image>
       </ImageView>
-      <TextField editable="false" layoutX="171.0" layoutY="228.0" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: none;" text="First Class">
+      <TextField editable="false" layoutX="171.0" layoutY="228.0" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: none;" text="First Class">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="F12" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
@@ -59,7 +58,7 @@
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="F15" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
@@ -74,7 +73,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="F11" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="272.0" onMouseClicked="#F11" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
@@ -89,7 +88,7 @@
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="F21" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="329.0" onMouseClicked="#F21" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
@@ -99,7 +98,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="329.0" onMouseClicked="#F23" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
@@ -114,7 +113,7 @@
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="329.0" onMouseClicked="#F24" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
@@ -129,7 +128,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <TextField editable="false" layoutX="160.0" layoutY="392.0" prefHeight="44.0" prefWidth="174.0" style="-fx-background-color: none;" text="Business Class">
+      <TextField editable="false" layoutX="160.0" layoutY="392.0" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: none;" text="Business Class">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -214,7 +213,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <TextField editable="false" layoutX="163.0" layoutY="562.0" prefHeight="44.0" prefWidth="174.0" style="-fx-background-color: none;" text="Economy Class">
+      <TextField editable="false" layoutX="163.0" layoutY="562.0" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: none;" text="Economy Class">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -345,9 +344,9 @@
          </image>
       </ImageView>
       <TextField editable="false" layoutX="18.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F11" />
-      <TextField editable="false" layoutX="62.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F12" />
-      <TextField editable="false" layoutX="113.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F13" />
-      <TextField editable="false" layoutX="165.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F14" />
+      <TextField editable="false" layoutX="62.0" layoutY="298.0" onMouseClicked="#F12" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F12" />
+      <TextField fx:id="F13" editable="false" layoutX="113.0" layoutY="298.0" onMouseClicked="#F13" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F13" />
+      <TextField editable="false" layoutX="165.0" layoutY="298.0" onMouseClicked="#F14" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F14" />
       <TextField editable="false" layoutX="263.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F15" />
       <TextField editable="false" layoutX="313.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F16" />
       <TextField editable="false" layoutX="365.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F17" />

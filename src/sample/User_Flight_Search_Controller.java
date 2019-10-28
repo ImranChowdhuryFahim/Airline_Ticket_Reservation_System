@@ -28,6 +28,7 @@ import sun.security.krb5.internal.crypto.Des;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -156,8 +157,8 @@ public class User_Flight_Search_Controller implements Initializable {
         int j = 0;
         Collections.sort(PossibleFlight);
         for(Flight x: PossibleFlight){
-            ResultsOfSearch.add(x.getFrom() + "-" + x.getTo() + "         Flight Name: " + x.getFlightName() + "         Fare: " + x.getFare() + "$");
-            System.out.println( ++cnt + "." + x.getFlightName() + "         " + "Fare: " + x .getFare());
+            ResultsOfSearch.add(x.getTo() + "-" + x.getFrom() + "         Flight Name: " + x.getFlightName() + "         Fare: " + x.getFare() + "$");
+            PrintStream var10000 = System.out;
         }
 
         Parent n= FXMLLoader.load(getClass().getResource("user_flight_search_result.fxml"));
