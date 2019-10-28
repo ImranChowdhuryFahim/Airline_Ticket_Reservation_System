@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UserPanelController">
+   <children>
+      <AnchorPane layoutY="-2.0" prefHeight="589.0" prefWidth="237.0" style="-fx-background-color: #808080;">
+         <children>
+            <Button layoutY="92.0" mnemonicParsing="false" onAction="#bookflight" prefHeight="45.0" prefWidth="237.0" stylesheets="@userpanelstyle.css" text="Book new flight ">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button layoutY="137.0" mnemonicParsing="false" onAction="#updateprofile" prefHeight="45.0" prefWidth="237.0" stylesheets="@userpanelstyle.css" text="Update Profile">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button layoutY="182.0" mnemonicParsing="false" onAction="#pay" prefHeight="45.0" prefWidth="237.0" stylesheets="@userpanelstyle.css" text="Pay">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button layoutY="227.0" mnemonicParsing="false" onAction="#logout" prefHeight="45.0" prefWidth="237.0" stylesheets="@userpanelstyle.css" text="Log Out">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Button layoutY="47.0" mnemonicParsing="false" onAction="#crnstatus" prefHeight="45.0" prefWidth="237.0" stylesheets="@userpanelstyle.css" text="Current Status">
+               <effect>
+                  <Glow />
+               </effect>
+            </Button>
+            <Label layoutX="-4.0" layoutY="-2.0" prefHeight="51.0" prefWidth="244.0" style="-fx-background-color: #29291d; -fx-text-fill: white;" text="         User Panel">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <Glow level="0.55" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="container" layoutX="237.0" prefHeight="589.0" prefWidth="580.0" />
+   </children>
+</AnchorPane>
