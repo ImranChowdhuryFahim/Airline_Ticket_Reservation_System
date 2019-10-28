@@ -522,6 +522,7 @@ public class seatViewController {
     void F11(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F11.setImage(img);
+        System.out.println(event.getPickResult().getIntersectedNode().getId());
 
     }
 

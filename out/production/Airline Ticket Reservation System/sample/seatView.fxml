@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="496.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.seatViewController">
+   <children>
+      <TextField editable="false" layoutX="66.0" layoutY="9.0" prefHeight="79.0" prefWidth="380.0" style="-fx-background-color: none;" text="    Select Your Seat">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" layoutX="29.0" layoutY="153.0" prefHeight="62.0" prefWidth="111.0" style="-fx-background-color: none;" text="Available:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="134.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="266.0" layoutY="160.0" prefHeight="48.0" prefWidth="139.0" style="-fx-background-color: none;" text="Unavailable:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="35.0" fitWidth="37.0" layoutX="396.0" layoutY="167.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="152.0" layoutY="88.0" prefHeight="62.0" prefWidth="120.0" style="-fx-background-color: none;" text="Selected:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </TextField>
+      <ImageView blendMode="MULTIPLY" fitHeight="35.0" fitWidth="37.0" layoutX="248.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@final_chair.png" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="171.0" layoutY="228.0" prefHeight="39.0" prefWidth="147.0" style="-fx-background-color: none;" text="First Class">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="F12" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="272.0" onMouseClicked="#F12" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F13" fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="272.0" onMouseClicked="#F13" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F14" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="272.0" onMouseClicked="#F14" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F15" fitHeight="35.0" fitWidth="37.0" layoutX="267.0" layoutY="272.0" onMouseClicked="#F15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F18" fitHeight="35.0" fitWidth="37.0" layoutX="414.0" layoutY="272.0" onMouseClicked="#F18" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F11" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="272.0" onMouseClicked="#F11" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F16" fitHeight="35.0" fitWidth="37.0" layoutX="316.0" layoutY="272.0" onMouseClicked="#F16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F17" fitHeight="35.0" fitWidth="37.0" layoutX="369.0" layoutY="272.0" onMouseClicked="#F17" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F21" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="329.0" onMouseClicked="#F21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F22" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="329.0" onMouseClicked="#F22" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F23" fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="329.0" onMouseClicked="#F23" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F25" fitHeight="35.0" fitWidth="37.0" layoutX="267.0" layoutY="329.0" onMouseClicked="#F25" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F26" fitHeight="35.0" fitWidth="37.0" layoutX="316.0" layoutY="329.0" onMouseClicked="#F26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F24" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="329.0" onMouseClicked="#F24" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F27" fitHeight="35.0" fitWidth="37.0" layoutX="369.0" layoutY="329.0" onMouseClicked="#F27" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="F28" fitHeight="35.0" fitWidth="37.0" layoutX="414.0" layoutY="329.0" onMouseClicked="#F28" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="160.0" layoutY="392.0" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: none;" text="Business Class">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="B11" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="451.0" onMouseClicked="#B11" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B12" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="451.0" onMouseClicked="#B12" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B13" fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="451.0" onMouseClicked="#B13" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B14" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="451.0" onMouseClicked="#B14" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B18" fitHeight="35.0" fitWidth="37.0" layoutX="414.0" layoutY="451.0" onMouseClicked="#B18" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B15" fitHeight="35.0" fitWidth="37.0" layoutX="267.0" layoutY="451.0" onMouseClicked="#B15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B17" fitHeight="35.0" fitWidth="37.0" layoutX="369.0" layoutY="451.0" onMouseClicked="#B17" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B16" fitHeight="35.0" fitWidth="37.0" layoutX="317.0" layoutY="451.0" onMouseClicked="#B16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B21" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="510.0" onMouseClicked="#B21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B25" fitHeight="35.0" fitWidth="37.0" layoutX="267.0" layoutY="510.0" onMouseClicked="#B25" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B26" fitHeight="35.0" fitWidth="37.0" layoutX="317.0" layoutY="510.0" onMouseClicked="#B26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B27" fitHeight="35.0" fitWidth="37.0" layoutX="369.0" layoutY="510.0" onMouseClicked="#B27" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B28" fitHeight="35.0" fitWidth="37.0" layoutX="414.0" layoutY="510.0" onMouseClicked="#B28" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B24" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="510.0" onMouseClicked="#B24" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B22" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="510.0" onMouseClicked="#B22" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="B23" fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="510.0" onMouseClicked="#B23" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="163.0" layoutY="562.0" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: none;" text="Economy Class">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="E12" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="620.0" onMouseClicked="#E12" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E11" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="620.0" onMouseClicked="#E11" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E13" fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="620.0" onMouseClicked="#E13" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E14" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="620.0" onMouseClicked="#E14" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E15" fitHeight="35.0" fitWidth="37.0" layoutX="274.0" layoutY="620.0" onMouseClicked="#E15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E16" fitHeight="35.0" fitWidth="37.0" layoutX="320.0" layoutY="620.0" onMouseClicked="#E16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E17" fitHeight="35.0" fitWidth="37.0" layoutX="369.0" layoutY="620.0" onMouseClicked="#E17" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E18" fitHeight="35.0" fitWidth="37.0" layoutX="414.0" layoutY="620.0" onMouseClicked="#E18" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E21" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="686.0" onMouseClicked="#E21" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E22" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="686.0" onMouseClicked="#E22" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E24" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="686.0" onMouseClicked="#E24" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E25" fitHeight="35.0" fitWidth="37.0" layoutX="274.0" layoutY="686.0" onMouseClicked="#E25" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E28" fitHeight="35.0" fitWidth="37.0" layoutX="414.0" layoutY="686.0" onMouseClicked="#E28" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E23" fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="686.0" onMouseClicked="#E23" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E26" fitHeight="35.0" fitWidth="37.0" layoutX="320.0" layoutY="686.0" onMouseClicked="#E26" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E27" fitHeight="35.0" fitWidth="37.0" layoutX="369.0" layoutY="686.0" onMouseClicked="#E27" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E31" fitHeight="35.0" fitWidth="37.0" layoutX="22.0" layoutY="748.0" onMouseClicked="#E31" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E32" fitHeight="35.0" fitWidth="37.0" layoutX="66.0" layoutY="748.0" onMouseClicked="#E32" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E39" fitHeight="35.0" fitWidth="37.0" layoutX="414.0" layoutY="748.0" onMouseClicked="#E39" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E34" fitHeight="35.0" fitWidth="37.0" layoutX="169.0" layoutY="748.0" onMouseClicked="#E34" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_red.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E33" fitHeight="35.0" fitWidth="37.0" layoutX="117.0" layoutY="748.0" onMouseClicked="#E33" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E36" fitHeight="35.0" fitWidth="37.0" layoutX="274.0" layoutY="748.0" onMouseClicked="#E36" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E37" fitHeight="35.0" fitWidth="37.0" layoutX="320.0" layoutY="748.0" onMouseClicked="#E37" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E38" fitHeight="35.0" fitWidth="37.0" layoutX="369.0" layoutY="748.0" onMouseClicked="#E38" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="E35" fitHeight="35.0" fitWidth="37.0" layoutX="221.0" layoutY="748.0" onMouseClicked="#E35" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-theatre-seat-80_blue.png" />
+         </image>
+      </ImageView>
+      <TextField editable="false" layoutX="18.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F11" />
+      <TextField editable="false" layoutX="62.0" layoutY="298.0" onMouseClicked="#F12" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F12" />
+      <TextField editable="false" layoutX="165.0" layoutY="298.0" onMouseClicked="#F14" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F14" />
+      <TextField editable="false" layoutX="263.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F15" />
+      <TextField editable="false" layoutX="313.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F16" />
+      <TextField editable="false" layoutX="365.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F17" />
+      <TextField editable="false" layoutX="409.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F18" />
+      <TextField editable="false" layoutX="18.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F21" />
+      <TextField editable="false" layoutX="62.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F22" />
+      <TextField editable="false" layoutX="113.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F23" />
+      <TextField editable="false" layoutX="165.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F24" />
+      <TextField editable="false" layoutX="263.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F25" />
+      <TextField editable="false" layoutX="312.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F26" />
+      <TextField editable="false" layoutX="365.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F27" />
+      <TextField editable="false" layoutX="410.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F28" />
+      <TextField editable="false" layoutX="18.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B11" />
+      <TextField editable="false" layoutX="62.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B12" />
+      <TextField editable="false" layoutX="113.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B13" />
+      <TextField editable="false" layoutX="165.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B14" />
+      <TextField editable="false" layoutX="263.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B15" />
+      <TextField editable="false" layoutX="312.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B16" />
+      <TextField editable="false" layoutX="364.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B17" />
+      <TextField editable="false" layoutX="410.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B18" />
+      <TextField editable="false" layoutX="18.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B21" />
+      <TextField editable="false" layoutX="62.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B22" />
+      <TextField editable="false" layoutX="113.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B23" />
+      <TextField editable="false" layoutX="165.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B24" />
+      <TextField editable="false" layoutX="263.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B25" />
+      <TextField editable="false" layoutX="316.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B26" />
+      <TextField editable="false" layoutX="365.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B27" />
+      <TextField editable="false" layoutX="410.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B28" />
+      <TextField editable="false" layoutX="18.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E11" />
+      <TextField editable="false" layoutX="62.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E12" />
+      <TextField editable="false" layoutX="113.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E13" />
+      <TextField editable="false" layoutX="165.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E14" />
+      <TextField editable="false" layoutX="270.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E15" />
+      <TextField editable="false" layoutX="316.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E16" />
+      <TextField editable="false" layoutX="364.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E17" />
+      <TextField editable="false" layoutX="409.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E18" />
+      <TextField editable="false" layoutX="18.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E21" />
+      <TextField editable="false" layoutX="62.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E22" />
+      <TextField editable="false" layoutX="112.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E23" />
+      <TextField editable="false" layoutX="165.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E24" />
+      <TextField editable="false" layoutX="269.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E25" />
+      <TextField editable="false" layoutX="316.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E26" />
+      <TextField editable="false" layoutX="365.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E27" />
+      <TextField editable="false" layoutX="410.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E28" />
+      <TextField editable="false" layoutX="18.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E31" />
+      <TextField editable="false" layoutX="62.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E32" />
+      <TextField editable="false" layoutX="113.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E33" />
+      <TextField editable="false" layoutX="165.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E34" />
+      <TextField editable="false" layoutX="217.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E35" />
+      <TextField editable="false" layoutX="270.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E36" />
+      <TextField editable="false" layoutX="316.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E37" />
+      <TextField editable="false" layoutX="365.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E38" />
+      <TextField editable="false" layoutX="410.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E39" />
+      <TextField editable="false" layoutX="112.0" layoutY="298.0" onMouseClicked="#F12" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F13" />
+      <Button layoutX="197.0" layoutY="809.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="99.0" style="-fx-background-color: grey;" text="Proceed">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
