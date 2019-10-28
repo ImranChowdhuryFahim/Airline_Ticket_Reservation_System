@@ -9,12 +9,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="493.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="66.0" layoutY="9.0" prefHeight="79.0" prefWidth="330.0" style="-fx-background-color: none;" text="    Select Your Seat">
+      <TextField editable="false" layoutX="66.0" layoutY="9.0" prefHeight="79.0" prefWidth="330.0" style="-fx-background-color: none;" text="    Select Your Seat">
          <font>
             <Font name="System Bold" size="31.0" />
          </font>
       </TextField>
-      <TextField layoutX="29.0" layoutY="153.0" prefHeight="62.0" prefWidth="98.0" style="-fx-background-color: none;" text="Available:">
+      <TextField editable="false" layoutX="29.0" layoutY="153.0" prefHeight="62.0" prefWidth="98.0" style="-fx-background-color: none;" text="Available:">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -24,7 +24,7 @@
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
       </ImageView>
-      <TextField layoutX="266.0" layoutY="160.0" prefHeight="48.0" prefWidth="120.0" style="-fx-background-color: none;" text="Unavailable:">
+      <TextField editable="false" layoutX="266.0" layoutY="160.0" prefHeight="48.0" prefWidth="120.0" style="-fx-background-color: none;" text="Unavailable:">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -34,7 +34,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <TextField layoutX="152.0" layoutY="88.0" prefHeight="62.0" prefWidth="98.0" style="-fx-background-color: none;" text="Selected:">
+      <TextField editable="false" layoutX="152.0" layoutY="88.0" prefHeight="62.0" prefWidth="98.0" style="-fx-background-color: none;" text="Selected:">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -44,7 +44,7 @@
             <Image url="@icons8-theatre-seat-80_black.png" />
          </image>
       </ImageView>
-      <TextField layoutX="171.0" layoutY="228.0" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: none;" text="First Class">
+      <TextField editable="false" layoutX="171.0" layoutY="228.0" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: none;" text="First Class">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -129,7 +129,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <TextField layoutX="160.0" layoutY="392.0" prefHeight="44.0" prefWidth="174.0" style="-fx-background-color: none;" text="Business Class">
+      <TextField editable="false" layoutX="160.0" layoutY="392.0" prefHeight="44.0" prefWidth="174.0" style="-fx-background-color: none;" text="Business Class">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -214,7 +214,7 @@
             <Image url="@icons8-theatre-seat-80_red.png" />
          </image>
       </ImageView>
-      <TextField layoutX="163.0" layoutY="562.0" prefHeight="44.0" prefWidth="174.0" style="-fx-background-color: none;" text="Economy Class">
+      <TextField editable="false" layoutX="163.0" layoutY="562.0" prefHeight="44.0" prefWidth="174.0" style="-fx-background-color: none;" text="Economy Class">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
@@ -344,62 +344,62 @@
             <Image url="@icons8-theatre-seat-80_blue.png" />
          </image>
       </ImageView>
-      <TextField layoutX="18.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F11" />
-      <TextField layoutX="62.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F12" />
-      <TextField layoutX="113.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F13" />
-      <TextField layoutX="165.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F14" />
-      <TextField layoutX="263.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F15" />
-      <TextField layoutX="313.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F16" />
-      <TextField layoutX="365.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F17" />
-      <TextField layoutX="409.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F18" />
-      <TextField layoutX="18.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F21" />
-      <TextField layoutX="62.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F22" />
-      <TextField layoutX="113.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F23" />
-      <TextField layoutX="165.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F24" />
-      <TextField layoutX="263.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F25" />
-      <TextField layoutX="312.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F26" />
-      <TextField layoutX="365.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F27" />
-      <TextField layoutX="410.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F28" />
-      <TextField layoutX="18.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B11" />
-      <TextField layoutX="62.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B12" />
-      <TextField layoutX="113.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B13" />
-      <TextField layoutX="165.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B14" />
-      <TextField layoutX="263.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B15" />
-      <TextField layoutX="312.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B16" />
-      <TextField layoutX="364.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B17" />
-      <TextField layoutX="410.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B18" />
-      <TextField layoutX="18.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B21" />
-      <TextField layoutX="62.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B22" />
-      <TextField layoutX="113.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B23" />
-      <TextField layoutX="165.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B24" />
-      <TextField layoutX="263.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B25" />
-      <TextField layoutX="316.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B26" />
-      <TextField layoutX="365.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B27" />
-      <TextField layoutX="410.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B28" />
-      <TextField layoutX="18.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E11" />
-      <TextField layoutX="62.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E12" />
-      <TextField layoutX="113.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E13" />
-      <TextField layoutX="165.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E14" />
-      <TextField layoutX="270.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E15" />
-      <TextField layoutX="316.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E16" />
-      <TextField layoutX="364.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E17" />
-      <TextField layoutX="409.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E18" />
-      <TextField layoutX="18.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E21" />
-      <TextField layoutX="62.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E22" />
-      <TextField layoutX="112.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E23" />
-      <TextField layoutX="165.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E24" />
-      <TextField layoutX="269.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E25" />
-      <TextField layoutX="316.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E26" />
-      <TextField layoutX="365.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E27" />
-      <TextField layoutX="410.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E28" />
-      <TextField layoutX="18.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E31" />
-      <TextField layoutX="62.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E32" />
-      <TextField layoutX="113.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E33" />
-      <TextField layoutX="165.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E34" />
-      <TextField layoutX="217.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E35" />
-      <TextField layoutX="270.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E36" />
-      <TextField layoutX="316.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E37" />
-      <TextField layoutX="365.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E38" />
-      <TextField layoutX="410.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E39" />
+      <TextField editable="false" layoutX="18.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F11" />
+      <TextField editable="false" layoutX="62.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F12" />
+      <TextField editable="false" layoutX="113.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F13" />
+      <TextField editable="false" layoutX="165.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F14" />
+      <TextField editable="false" layoutX="263.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F15" />
+      <TextField editable="false" layoutX="313.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F16" />
+      <TextField editable="false" layoutX="365.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F17" />
+      <TextField editable="false" layoutX="409.0" layoutY="298.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F18" />
+      <TextField editable="false" layoutX="18.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F21" />
+      <TextField editable="false" layoutX="62.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F22" />
+      <TextField editable="false" layoutX="113.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F23" />
+      <TextField editable="false" layoutX="165.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F24" />
+      <TextField editable="false" layoutX="263.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F25" />
+      <TextField editable="false" layoutX="312.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F26" />
+      <TextField editable="false" layoutX="365.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F27" />
+      <TextField editable="false" layoutX="410.0" layoutY="364.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="F28" />
+      <TextField editable="false" layoutX="18.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B11" />
+      <TextField editable="false" layoutX="62.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B12" />
+      <TextField editable="false" layoutX="113.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B13" />
+      <TextField editable="false" layoutX="165.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B14" />
+      <TextField editable="false" layoutX="263.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B15" />
+      <TextField editable="false" layoutX="312.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B16" />
+      <TextField editable="false" layoutX="364.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B17" />
+      <TextField editable="false" layoutX="410.0" layoutY="479.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B18" />
+      <TextField editable="false" layoutX="18.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B21" />
+      <TextField editable="false" layoutX="62.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B22" />
+      <TextField editable="false" layoutX="113.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B23" />
+      <TextField editable="false" layoutX="165.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B24" />
+      <TextField editable="false" layoutX="263.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B25" />
+      <TextField editable="false" layoutX="316.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B26" />
+      <TextField editable="false" layoutX="365.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B27" />
+      <TextField editable="false" layoutX="410.0" layoutY="547.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="B28" />
+      <TextField editable="false" layoutX="18.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E11" />
+      <TextField editable="false" layoutX="62.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E12" />
+      <TextField editable="false" layoutX="113.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E13" />
+      <TextField editable="false" layoutX="165.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E14" />
+      <TextField editable="false" layoutX="270.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E15" />
+      <TextField editable="false" layoutX="316.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E16" />
+      <TextField editable="false" layoutX="364.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E17" />
+      <TextField editable="false" layoutX="409.0" layoutY="655.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E18" />
+      <TextField editable="false" layoutX="18.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E21" />
+      <TextField editable="false" layoutX="62.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E22" />
+      <TextField editable="false" layoutX="112.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E23" />
+      <TextField editable="false" layoutX="165.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E24" />
+      <TextField editable="false" layoutX="269.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E25" />
+      <TextField editable="false" layoutX="316.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E26" />
+      <TextField editable="false" layoutX="365.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E27" />
+      <TextField editable="false" layoutX="410.0" layoutY="721.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E28" />
+      <TextField editable="false" layoutX="18.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E31" />
+      <TextField editable="false" layoutX="62.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E32" />
+      <TextField editable="false" layoutX="113.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E33" />
+      <TextField editable="false" layoutX="165.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E34" />
+      <TextField editable="false" layoutX="217.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E35" />
+      <TextField editable="false" layoutX="270.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E36" />
+      <TextField editable="false" layoutX="316.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E37" />
+      <TextField editable="false" layoutX="365.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E38" />
+      <TextField editable="false" layoutX="410.0" layoutY="778.0" prefHeight="23.0" prefWidth="44.0" style="-fx-background-color: none;" text="E39" />
    </children>
 </AnchorPane>
