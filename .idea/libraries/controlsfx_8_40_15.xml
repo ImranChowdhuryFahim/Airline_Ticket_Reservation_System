@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="json-simple-1.1">
+  <library name="controlsfx-8.40.15">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../jar/json-simple-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jar/controlsfx-8.40.15.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
