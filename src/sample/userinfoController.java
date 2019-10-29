@@ -36,7 +36,7 @@ public class userinfoController  implements Initializable {
     private Label pst;
 
     @FXML
-    private Label upflight;
+    private Label flight_no;
 
     @FXML
     private Label deptime;
@@ -85,7 +85,7 @@ public class userinfoController  implements Initializable {
             if (emg != null) {
                 img.setImage(emg);
             }
-            upflight.setText("Null");
+            flight_no.setText("Null");
             deptime.setText("Null");
             pst.setText("Null");
         }

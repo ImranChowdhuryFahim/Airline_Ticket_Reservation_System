@@ -1,15 +1,26 @@
 package sample;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
 import java.awt.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javafx.stage.Stage;
 import org.omg.CORBA.PRIVATE_MEMBER;
 
 public class seatViewController {
+    public  static List<String> seat=new ArrayList<String>();
 
     @FXML
     private ImageView F12;
@@ -186,6 +197,7 @@ public class seatViewController {
     void B11(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B11.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -193,6 +205,7 @@ public class seatViewController {
     void B12(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B12.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -200,6 +213,7 @@ public class seatViewController {
     void B13(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B13.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -208,6 +222,7 @@ public class seatViewController {
 
         Image img=new Image("sample/final_chair.png");
         B14.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
     }
 
     @FXML
@@ -224,6 +239,7 @@ public class seatViewController {
     void B16(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B16.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -252,6 +268,7 @@ public class seatViewController {
     void B21(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B21.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -279,6 +296,7 @@ public class seatViewController {
     void B24(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B24.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -286,6 +304,7 @@ public class seatViewController {
     void B25(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B25.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -293,6 +312,7 @@ public class seatViewController {
     void B26(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B26.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -300,6 +320,7 @@ public class seatViewController {
     void B27(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B27.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -307,6 +328,7 @@ public class seatViewController {
     void B28(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         B28.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -314,6 +336,7 @@ public class seatViewController {
     void E11(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E11.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -321,6 +344,7 @@ public class seatViewController {
     void E12(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E12.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -328,6 +352,7 @@ public class seatViewController {
     void E13(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E13.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -335,6 +360,7 @@ public class seatViewController {
     void E14(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E14.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -342,6 +368,7 @@ public class seatViewController {
     void E15(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E15.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -349,6 +376,7 @@ public class seatViewController {
     void E16(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E16.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -396,6 +424,7 @@ public class seatViewController {
     void E23(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E23.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -423,6 +452,7 @@ public class seatViewController {
     void E26(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E26.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -430,6 +460,7 @@ public class seatViewController {
     void E27(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E27.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -467,6 +498,7 @@ public class seatViewController {
     void E33(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E33.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -484,6 +516,7 @@ public class seatViewController {
     void E35(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E35.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -491,6 +524,7 @@ public class seatViewController {
     void E36(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E36.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -498,6 +532,7 @@ public class seatViewController {
     void E37(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E37.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -505,6 +540,7 @@ public class seatViewController {
     void E38(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         E38.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -522,7 +558,7 @@ public class seatViewController {
     void F11(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F11.setImage(img);
-        System.out.println(event.getPickResult().getIntersectedNode().getId());
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -530,6 +566,7 @@ public class seatViewController {
     void F12(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F12.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -537,6 +574,7 @@ public class seatViewController {
     void F13(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F13.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -544,6 +582,7 @@ public class seatViewController {
     void F14(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F14.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -561,6 +600,7 @@ public class seatViewController {
     void F16(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F16.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -568,6 +608,7 @@ public class seatViewController {
     void F17(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F17.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -605,6 +646,7 @@ public class seatViewController {
     void F23(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F23.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -612,6 +654,7 @@ public class seatViewController {
     void F24(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F24.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -619,6 +662,7 @@ public class seatViewController {
     void F25(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F25.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -626,6 +670,7 @@ public class seatViewController {
     void F26(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F26.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -633,6 +678,7 @@ public class seatViewController {
     void F27(MouseEvent event) {
         Image img=new Image("sample/final_chair.png");
         F27.setImage(img);
+        seat.add(event.getPickResult().getIntersectedNode().getId());
 
     }
 
@@ -643,6 +689,19 @@ public class seatViewController {
         Logout.setContentText("Seat Not Available");
         Logout.setHeaderText("Seat Info");
         Logout.show();
+
+    }
+
+    @FXML
+    void proceed(ActionEvent event) throws IOException {
+        UserPanelController.p=1;
+        Parent n= FXMLLoader.load(getClass().getResource("user__Panel.fxml"));
+        Scene n1=new Scene(n);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setTitle("User panel");
+        window.setScene(n1);
+        window.show();
+
 
     }
 

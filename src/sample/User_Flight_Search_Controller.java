@@ -96,15 +96,21 @@ public class User_Flight_Search_Controller implements Initializable {
         return (From.equals("") && To.equals("")) ? 3 : (From.equals("") ? 1 : (To.equals("") ? 2: 7));
     }
 
+    public static String FromString=null;
+    public static String DestinationString=null;
+    public static String JourneyDateString=null;
+    public static String OneWayOrRound=null;
+    public static String SeatClass=null;
+
     @FXML
     void Seach(ActionEvent event) throws IOException, ParseException {
         warningbesidesFrom.setText("");
         warningbesidesTo.setText("");
-        String FromString = From.getText();
-        String DestinationString = To.getText();
-        String JourneyDateString = JourneyDate.toString();
-        String OneWayOrRound = OneWay.isSelected() ? OneWay.getText() : RoundWay.getText();
-        String SeatClass = SeatClassChoisebox.getValue();
+        FromString = From.getText();
+        DestinationString = To.getText();
+        JourneyDateString = JourneyDate.getValue().toString();
+        OneWayOrRound = OneWay.isSelected() ? OneWay.getText() : RoundWay.getText();
+        SeatClass = SeatClassChoisebox.getValue();
         int validity = TestTheSearchValidity(FromString, DestinationString);
         if(validity != 7){
             String Warning = "You must fill this field";

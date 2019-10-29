@@ -49,16 +49,16 @@
          <font>
             <Font size="15.0" />
          </font></Label>
-      <Label fx:id="upflight" layoutX="286.0" layoutY="492.0" prefHeight="27.0" prefWidth="180.0" text="flight status" textFill="#ffe9e9">
+      <Label fx:id="flight_no" layoutX="286.0" layoutY="492.0" prefHeight="27.0" prefWidth="180.0" text="flight no" textFill="#ffe9e9">
          <font>
             <Font size="15.0" />
          </font></Label>
-      <Text fill="#eee8e8" layoutX="50.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upcoming Flight:">
+      <Text fill="#eee8e8" layoutX="50.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight No:">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text fill="#eee8e8" layoutX="48.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Next flight departure:">
+      <Text fill="#eee8e8" layoutX="48.0" layoutY="553.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Flight Time:">
          <font>
             <Font size="20.0" />
          </font>

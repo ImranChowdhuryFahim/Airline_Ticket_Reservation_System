@@ -22,6 +22,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class UserPanelController implements Initializable {
+     static  int p=0;
 
     @FXML
     private AnchorPane container;
@@ -99,8 +100,10 @@ public class UserPanelController implements Initializable {
             Logger.getLogger(UserPanelController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        setNode(userinfo);
-
+        if(p==0) {
+            setNode(userinfo);
+        }
+        else if(p==1)setNode(pay);
     }
 }
 
