@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="621.0" prefWidth="600.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.live_flight_update">
+<AnchorPane prefHeight="621.0" prefWidth="600.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.live_flight_update">
    <children>
       <Label layoutX="53.0" layoutY="47.0" text="Flight No:" textFill="SILVER">
          <font>
@@ -63,6 +62,6 @@
             <Font size="28.0" />
          </font>
       </Label>
-      <ListView fx:id="ListView" layoutX="60.0" layoutY="305.0" prefHeight="307.0" prefWidth="452.0" />
+      <ListView fx:id="ListView" layoutX="60.0" layoutY="305.0" prefHeight="307.0" prefWidth="452.0" styleClass="list-cell" stylesheets="@ListViewStyle.css" />
    </children>
 </AnchorPane>

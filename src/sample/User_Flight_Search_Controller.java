@@ -61,8 +61,6 @@ public class User_Flight_Search_Controller implements Initializable {
     @FXML
     private TextField To;
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -114,69 +112,53 @@ public class User_Flight_Search_Controller implements Initializable {
         OneWayOrRound = OneWay.isSelected() ? OneWay.getText() : RoundWay.getText();
         SeatClass = SeatClassChoisebox.getValue();
         int validity = TestTheSearchValidity(FromString, DestinationString);
-        if(validity != 7){
+        if (validity != 7) {
             String Warning = "You must fill this field";
-            if(validity == 3){
+            if (validity == 3) {
                 warningbesidesTo.setText(Warning);
                 warningbesidesFrom.setText(Warning);
-            }
-            else if(validity == 1){
+            } else if (validity == 1) {
                 warningbesidesFrom.setText(Warning);
-            }
-            else if(validity == 2){
+            } else if (validity == 2) {
                 warningbesidesTo.setText(Warning);
             }
-
             return;
         }
 
         //flight data has been stored in json arrays, let's retrieve the data we need
-
         int cnt = 0;
         List<Flight> PossibleFlight = new ArrayList<Flight>();
-
         Object obj = new JSONParser().parse(new FileReader("flightinfo.json"));
         JSONArray JArray = (JSONArray) obj;
-        for(Object tmpObject: JArray){
+        for (Object tmpObject : JArray) {
             JSONObject JtempObject = (JSONObject) tmpObject;
 
             //parse fare from the string
             String Fare = JtempObject.get("Fare").toString().replace("$", "");
-          // System.out.println(DestinationStringious commit + " " +  JtempObject.get("Destination") + " " + JtempObject.get("Source") + " " + FromString);
-            if(JtempObject.get("Destination").equals(DestinationString) && JtempObject.get("Source").equals(FromString)){
-
-                if(OneWayOrRound == "y"){
-                    if(JtempObject.get("Class").equals(OneWayOrRound)){
+             System.out.println(DestinationString + " " +  JtempObject.get("Destination") + " " + JtempObject.get("Source") + " " + FromString + " " + JtempObject.get("Class") + " " + SeatClass);
+            if (JtempObject.get("Destination").equals(DestinationString) && JtempObject.get("Source").equals(FromString) && JtempObject.get("Class").equals(SeatClass + " Class")) {
+                if (OneWayOrRound == "y") {
+                    if (JtempObject.get("Class").equals(OneWayOrRound)) {
                         System.out.println("we are **here");
-
                     }
-                }
-                else{
+                } else {
                     //System.out.println("we are here");
-                    Flight tempFligth = new Flight (JtempObject.get("Flight Name").toString(), FromString, DestinationString, Integer.valueOf(Fare) , JtempObject.get("Class").toString(), JtempObject.get("Departure Time").toString());
-
+                    Flight tempFligth = new Flight(JtempObject.get("Flight Name").toString(), FromString, DestinationString, Integer.valueOf(Fare), JtempObject.get("Class").toString(), JtempObject.get("Departure Time").toString());
                     PossibleFlight.add(tempFligth);
-
                 }
             }
-
-           // System.out.println(JtempObject);
         }
         int j = 0;
         Collections.sort(PossibleFlight);
-        for(Flight x: PossibleFlight){
+        for (Flight x : PossibleFlight) {
             ResultsOfSearch.add(x.getTo() + "-" + x.getFrom() + "         Flight Name: " + x.getFlightName() + "         Fare: " + x.getFare() + "$");
             PrintStream var10000 = System.out;
         }
-
-        Parent n= FXMLLoader.load(getClass().getResource("user_flight_search_result.fxml"));
-        Scene n1=new Scene(n);
-        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        Parent n = FXMLLoader.load(getClass().getResource("user_flight_search_result.fxml"));
+        Scene n1 = new Scene(n);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setTitle("Profile");
         window.setScene(n1);
         window.show();
     }
-
-
-
 }
