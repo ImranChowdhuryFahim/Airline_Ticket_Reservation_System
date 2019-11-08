@@ -62,6 +62,7 @@ public class paymentcontroller implements Initializable {
         from.setText(User_Flight_Search_Controller.FromString);
         to.setText(User_Flight_Search_Controller.DestinationString);
         date.setText(User_Flight_Search_Controller.JourneyDateString);
+        /*amount.setText(seatViewController.seat.size() * );*/
         type.setText(User_Flight_Search_Controller.OneWayOrRound);
         seat_class.setText(User_Flight_Search_Controller.SeatClass);
         seat_no.setText(seatViewController.seat.toString().replace('[',' ').replace(']',' '));

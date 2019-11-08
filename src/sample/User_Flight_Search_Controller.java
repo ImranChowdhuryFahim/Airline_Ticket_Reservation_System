@@ -25,15 +25,13 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import sun.security.krb5.internal.crypto.Des;
 
+import javax.sound.midi.Track;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 
 public class User_Flight_Search_Controller implements Initializable {
@@ -84,12 +82,16 @@ public class User_Flight_Search_Controller implements Initializable {
             JSONObject JsonObject = (JSONObject) x;
             AllPossibleFrom[i] = JsonObject.get("Source").toString();
             AllPossibleTo[i] = JsonObject.get("Destination").toString();
-
             i++;
         }
+        Set<String> AllDestination = new HashSet<String>();
+        Set<String> AllSource = new HashSet<String>();
+        Collections.addAll(AllDestination, AllPossibleTo);
+        Collections.addAll(AllSource, AllPossibleFrom);
+
         SeatClassChoisebox.getItems().addAll("Economy","Business","First Class");
-        TextFields.bindAutoCompletion(From, AllPossibleFrom);
-        TextFields.bindAutoCompletion(To, AllPossibleTo);
+        TextFields.bindAutoCompletion(From, AllSource);
+        TextFields.bindAutoCompletion(To, AllDestination);
     }
 
     int TestTheSearchValidity(String From, String To){
