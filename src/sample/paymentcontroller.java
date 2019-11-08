@@ -2,10 +2,16 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -38,9 +44,16 @@ public class paymentcontroller implements Initializable {
     @FXML
     private Label seat_no;
 
-    @FXML
-    void confirm(ActionEvent event) {
 
+    @FXML
+    void confirm(ActionEvent event) throws IOException {
+
+        Parent n= FXMLLoader.load(getClass().getResource("live_flight_update.fxml"));
+        Scene n1=new Scene(n);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setTitle("SignUp");
+        window.setScene(n1);
+        window.show();
 
     }
 
@@ -52,5 +65,6 @@ public class paymentcontroller implements Initializable {
         type.setText(User_Flight_Search_Controller.OneWayOrRound);
         seat_class.setText(User_Flight_Search_Controller.SeatClass);
         seat_no.setText(seatViewController.seat.toString().replace('[',' ').replace(']',' '));
+        amount.setText(String.valueOf(SearchResult.l*seatViewController.seat.size()));
     }
 }

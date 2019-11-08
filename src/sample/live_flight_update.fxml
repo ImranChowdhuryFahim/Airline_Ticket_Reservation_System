@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="621.0" prefWidth="600.0" style="-fx-background-color: #29293d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.live_flight_update">
+   <children>
+      <Label layoutX="53.0" layoutY="47.0" text="Flight No:" textFill="SILVER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="flight_no" layoutX="186.0" layoutY="47.0" text="Label" textFill="#e0be00">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="99.0" text="Flight:" textFill="SILVER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="flight" layoutX="186.0" layoutY="99.0" text="Label" textFill="#e0be00">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="149.0" text="Seat No:" textFill="SILVER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="seat" layoutX="186.0" layoutY="149.0" text="Label" textFill="#e0be00">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="201.0" text="Flight TIme:" textFill="SILVER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="flight_time" layoutX="186.0" layoutY="201.0" text="Label" textFill="#e0be00">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="47.0" text="Current TIme:" textFill="SILVER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="current_time" layoutX="501.0" layoutY="47.0" text="Label" textFill="#e0be00">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="256.0" text="Live Flight Bording Details" textFill="#dd4b4b">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <ListView fx:id="ListView" layoutX="60.0" layoutY="305.0" prefHeight="307.0" prefWidth="452.0" />
+   </children>
+</AnchorPane>

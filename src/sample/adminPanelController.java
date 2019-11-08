@@ -8,8 +8,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.input.SwipeEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -60,6 +62,17 @@ public class adminPanelController implements Initializable {
     void userListButtonAction(ActionEvent event) throws IOException {
         Parent pane = (Parent) FXMLLoader.load(getClass().getResource("UserList.fxml"));
         adminMainContent.getChildren().add(pane);
+    }
+
+    @FXML
+    void back(ActionEvent event) throws IOException {
+        Parent n= FXMLLoader.load(getClass().getResource("log_in_page.fxml"));
+        Scene n1=new Scene(n);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setTitle("Log in Page");
+        window.setScene(n1);
+        window.show();
+
     }
 
 }
