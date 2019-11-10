@@ -135,7 +135,7 @@ public class User_Flight_Search_Controller implements Initializable {
 
             //parse fare from the string
             String Fare = JtempObject.get("Fare").toString().replace("$", "");
-             System.out.println(DestinationString + " " +  JtempObject.get("Destination") + " " + JtempObject.get("Source") + " " + FromString + " " + JtempObject.get("Class") + " " + SeatClass);
+            // System.out.println(DestinationString + " " +  JtempObject.get("Destination") + " " + JtempObject.get("Source") + " " + FromString + " " + JtempObject.get("Class") + " " + SeatClass);
             if (JtempObject.get("Destination").equals(DestinationString) && JtempObject.get("Source").equals(FromString) && JtempObject.get("Class").equals(SeatClass + " Class")) {
                 if (OneWayOrRound == "y") {
                     if (JtempObject.get("Class").equals(OneWayOrRound)) {
