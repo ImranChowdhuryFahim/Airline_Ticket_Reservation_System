@@ -24,6 +24,9 @@ public class Flight implements Comparable<Flight> {
         public String getTo() {return From;}
         public String getDepartureTime() {return DepartureTime;}
         public Integer getFare(){ return fare; }
+        public  String getSeatClass(){
+            return  SeatClass;
+        }
 
 
     @Override

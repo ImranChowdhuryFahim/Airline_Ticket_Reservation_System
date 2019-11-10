@@ -25,13 +25,13 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import sun.security.krb5.internal.crypto.Des;
 
-import javax.sound.midi.Track;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.URL;
 import java.util.*;
+import java.util.jar.JarOutputStream;
 
 
 public class User_Flight_Search_Controller implements Initializable {
@@ -61,6 +61,8 @@ public class User_Flight_Search_Controller implements Initializable {
     @FXML
     private TextField To;
 
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
@@ -80,6 +82,7 @@ public class User_Flight_Search_Controller implements Initializable {
             JSONObject JsonObject = (JSONObject) x;
             AllPossibleFrom[i] = JsonObject.get("Source").toString();
             AllPossibleTo[i] = JsonObject.get("Destination").toString();
+
             i++;
         }
         Set<String> AllDestination = new HashSet<String>();
@@ -87,7 +90,7 @@ public class User_Flight_Search_Controller implements Initializable {
         Collections.addAll(AllDestination, AllPossibleTo);
         Collections.addAll(AllSource, AllPossibleFrom);
 
-        SeatClassChoisebox.getItems().addAll("Economy","Business","First Class");
+        SeatClassChoisebox.getItems().addAll("Economy Class","Business Class","First Class");
         TextFields.bindAutoCompletion(From, AllSource);
         TextFields.bindAutoCompletion(To, AllDestination);
     }
@@ -108,57 +111,102 @@ public class User_Flight_Search_Controller implements Initializable {
         warningbesidesTo.setText("");
         FromString = From.getText();
         DestinationString = To.getText();
-        JourneyDateString = JourneyDate.getValue().toString();
+        if(JourneyDate.getValue()!=null){
+            JourneyDateString = JourneyDate.getValue().toString();
+        }
+        else {
+            JourneyDateString=null;
+        }
         OneWayOrRound = OneWay.isSelected() ? OneWay.getText() : RoundWay.getText();
         SeatClass = SeatClassChoisebox.getValue();
         int validity = TestTheSearchValidity(FromString, DestinationString);
-        if (validity != 7) {
+        if(validity != 7){
             String Warning = "You must fill this field";
-            if (validity == 3) {
+            if(validity == 3){
                 warningbesidesTo.setText(Warning);
                 warningbesidesFrom.setText(Warning);
-            } else if (validity == 1) {
+            }
+            else if(validity == 1){
                 warningbesidesFrom.setText(Warning);
-            } else if (validity == 2) {
+            }
+            else if(validity == 2){
                 warningbesidesTo.setText(Warning);
             }
+
             return;
         }
 
         //flight data has been stored in json arrays, let's retrieve the data we need
+
         int cnt = 0;
         List<Flight> PossibleFlight = new ArrayList<Flight>();
+
         Object obj = new JSONParser().parse(new FileReader("flightinfo.json"));
         JSONArray JArray = (JSONArray) obj;
-        for (Object tmpObject : JArray) {
+        for(Object tmpObject: JArray){
             JSONObject JtempObject = (JSONObject) tmpObject;
-
+            int f=1;
+            if(SeatClass==null)
+            {
+                f=0;
+            }
             //parse fare from the string
             String Fare = JtempObject.get("Fare").toString().replace("$", "");
-            // System.out.println(DestinationString + " " +  JtempObject.get("Destination") + " " + JtempObject.get("Source") + " " + FromString + " " + JtempObject.get("Class") + " " + SeatClass);
-            if (JtempObject.get("Destination").equals(DestinationString) && JtempObject.get("Source").equals(FromString) && JtempObject.get("Class").equals(SeatClass + " Class")) {
-                if (OneWayOrRound == "y") {
-                    if (JtempObject.get("Class").equals(OneWayOrRound)) {
-                        System.out.println("we are **here");
-                    }
-                } else {
-                    //System.out.println("we are here");
-                    Flight tempFligth = new Flight(JtempObject.get("Flight Name").toString(), FromString, DestinationString, Integer.valueOf(Fare), JtempObject.get("Class").toString(), JtempObject.get("Departure Time").toString());
-                    PossibleFlight.add(tempFligth);
-                }
-            }
+            // System.out.println(DestinationStringious commit + " " +  JtempObject.get("Destination") + " " + JtempObject.get("Source") + " " + FromString);
+             if(f==1) {
+                 if (JtempObject.get("Destination").equals(DestinationString) && JtempObject.get("Source").equals(FromString) && JtempObject.get("Class").equals(SeatClass)) {
+
+                     if (OneWayOrRound == "y") {
+                         if (JtempObject.get("Class").equals(OneWayOrRound)) {
+                             System.out.println("we are **here");
+
+                         }
+                     } else {
+                         //System.out.println("we are here");
+                         Flight tempFligth = new Flight(JtempObject.get("Flight Name").toString(), FromString, DestinationString, Integer.valueOf(Fare), JtempObject.get("Class").toString(), JtempObject.get("Departure Time").toString());
+
+                         PossibleFlight.add(tempFligth);
+
+                     }
+                 }
+             }
+             else{
+                 if (JtempObject.get("Destination").equals(DestinationString) && JtempObject.get("Source").equals(FromString)) {
+
+                     if (OneWayOrRound == "y") {
+                         if (JtempObject.get("Class").equals(OneWayOrRound)) {
+                             System.out.println("we are **here");
+
+                         }
+                     } else {
+                         //System.out.println("we are here");
+                         Flight tempFligth = new Flight(JtempObject.get("Flight Name").toString(), FromString, DestinationString, Integer.valueOf(Fare), JtempObject.get("Class").toString(), JtempObject.get("Departure Time").toString());
+
+                         PossibleFlight.add(tempFligth);
+
+                     }
+                 }
+
+             }
+
+
+            // System.out.println(JtempObject);
         }
         int j = 0;
         Collections.sort(PossibleFlight);
-        for (Flight x : PossibleFlight) {
-            ResultsOfSearch.add(x.getTo() + "-" + x.getFrom() + "         Flight Name: " + x.getFlightName() + "         Fare: " + x.getFare() + "$");
+        for(Flight x: PossibleFlight){
+            ResultsOfSearch.add(x.getTo() + "-" + x.getFrom() + "         Flight Name: " + x.getFlightName() + "         Fare: " + x.getFare() + "$"  +"    "+"Class: "+x.getSeatClass());
             PrintStream var10000 = System.out;
         }
-        Parent n = FXMLLoader.load(getClass().getResource("user_flight_search_result.fxml"));
-        Scene n1 = new Scene(n);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        Parent n= FXMLLoader.load(getClass().getResource("user_flight_search_result.fxml"));
+        Scene n1=new Scene(n);
+        Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("Profile");
         window.setScene(n1);
         window.show();
     }
+
+
+
 }

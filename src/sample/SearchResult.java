@@ -23,6 +23,7 @@ public class SearchResult implements Initializable {
     public static Integer l=0;
     public static String t=null;
     public  static  String r=null;
+    public  static String u=null;
     @FXML
     private javafx.scene.control.ListView<String> ListView;
 //    ObservableList<String> Answer = FXCollections.observableArrayList("Hello", "sello", "mello");
@@ -35,9 +36,10 @@ public class SearchResult implements Initializable {
             public void handle(MouseEvent event) {
                 if(event.getClickCount() == 2) {
                    String[] s= ListView.getSelectionModel().getSelectedItem().split(" ");
-                   l=Integer.valueOf(s[s.length-1].replace("$",""));
+                   l=Integer.valueOf(s[s.length-7].replace("$",""));
                   t=s[11]+" "+s[12];
                   r=s[0]+"-"+s[1].replace("-","");
+                  u=s[27]+"  "+s[28];
                     Parent n= null;
                     try {
                         n = FXMLLoader.load(getClass().getResource("seatView.fxml"));
