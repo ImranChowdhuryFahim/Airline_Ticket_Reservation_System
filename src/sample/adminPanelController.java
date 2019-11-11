@@ -75,4 +75,10 @@ public class adminPanelController implements Initializable {
 
     }
 
+    @FXML
+    void add_admin(ActionEvent event) throws IOException {
+        Parent pane = (Parent) FXMLLoader.load(getClass().getResource("add_admin.fxml"));
+        adminMainContent.getChildren().add(pane);
+    }
+
 }

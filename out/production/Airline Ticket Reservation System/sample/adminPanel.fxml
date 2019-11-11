@@ -61,7 +61,15 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
                 </Button>
-            <Button layoutX="10.0" layoutY="193.0" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="250.0" stylesheets="@Style.css" text="Back" textFill="#fcf8f8">
+            <Button layoutX="10.0" layoutY="193.0" mnemonicParsing="false" onAction="#add_admin" prefHeight="44.0" prefWidth="250.0" stylesheets="@Style.css" text="Add Admin" textFill="#fcf8f8">
+               <font>
+                  <Font name="Ebrima Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="10.0" layoutY="237.0" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="250.0" stylesheets="@Style.css" text="Back" textFill="#fcf8f8">
                <font>
                   <Font name="Ebrima Bold" size="18.0" />
                </font>

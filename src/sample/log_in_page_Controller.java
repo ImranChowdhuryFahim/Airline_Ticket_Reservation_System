@@ -100,10 +100,10 @@ public class log_in_page_Controller {
     @FXML
     void adminlogin(ActionEvent event) throws IOException {
 
-        Parent n= FXMLLoader.load(getClass().getResource("adminPanel.fxml"));
+        Parent n= FXMLLoader.load(getClass().getResource("AdminLogin.fxml"));
         Scene n1=new Scene(n);
         Stage window=(Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setTitle("SignUp");
+        window.setTitle("Admin Login");
         window.setScene(n1);
         window.show();
 
