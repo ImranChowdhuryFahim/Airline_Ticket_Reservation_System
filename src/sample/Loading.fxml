@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LoadingAP" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Loading">
+   <children>
+      <Label layoutX="217.0" layoutY="47.0" text="Welcome" textFill="#1e1313">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="loadinglb" layoutX="275.0" layoutY="123.0" prefHeight="44.0" prefWidth="51.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="98.0" text="Database is loading ..." />
+   </children>
+</AnchorPane>

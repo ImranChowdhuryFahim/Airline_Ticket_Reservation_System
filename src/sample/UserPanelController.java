@@ -97,7 +97,7 @@ public class UserPanelController implements Initializable {
             flightsearch = FXMLLoader.load(getClass().getResource("user_flight_search.fxml"));
             userinfo = FXMLLoader.load(getClass().getResource("userInfo.fxml"));
         } catch (IOException ex) {
-            Logger.getLogger(UserPanelController.class.getName()).log(Level.SEVERE, null, ex);
+                                                                                                                                                                            Logger.getLogger(UserPanelController.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         if(p==0) {

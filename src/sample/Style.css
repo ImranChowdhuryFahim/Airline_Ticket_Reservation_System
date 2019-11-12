@@ -15,4 +15,9 @@
   -fx-background-color : none;
 }
 
+#taglabels1{
+    -fx-font-family: 'sans-serif';
+    -fx-font: 100;
+}
+
 

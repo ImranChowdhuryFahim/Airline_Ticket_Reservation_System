@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #29292D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Delete">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #29292D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Delete">
    <children>
       <VBox layoutY="54.0" prefHeight="350.0" prefWidth="200.0">
          <children>
@@ -82,7 +82,7 @@
       </VBox>
       <VBox layoutX="200.0" layoutY="54.0" prefHeight="350.0" prefWidth="249.0">
          <children>
-            <TextField style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="FlightNO" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
@@ -90,48 +90,48 @@
                   <Font name="Arial" size="12.0" />
                </font>
             </TextField>
-            <TextField layoutX="10.0" layoutY="30.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="FlightName" layoutX="10.0" layoutY="30.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
             </TextField>
-            <TextField layoutX="10.0" layoutY="56.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="Source" layoutX="10.0" layoutY="56.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
             </TextField>
-            <TextField layoutX="10.0" layoutY="82.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="Destination" layoutX="10.0" layoutY="82.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
             </TextField>
-            <TextField layoutX="10.0" layoutY="108.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="DepartTime" layoutX="10.0" layoutY="108.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
             </TextField>
-            <TextField layoutX="10.0" layoutY="134.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="Arivaltime" layoutX="10.0" layoutY="134.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
             </TextField>
-            <TextField layoutX="10.0" layoutY="160.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="fare" layoutX="10.0" layoutY="160.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>
             </TextField>
-            <TextField layoutX="10.0" layoutY="269.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="Clas" layoutX="10.0" layoutY="269.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
             </TextField>
          </children></VBox>
-      <Button layoutX="273.0" layoutY="426.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="93.0" style="-fx-background-color: #25AAE2; -fx-background-radius: 20;" text="Delete">
+      <Button layoutX="273.0" layoutY="426.0" mnemonicParsing="false" onAction="#DeletePressed" prefHeight="39.0" prefWidth="93.0" style="-fx-background-color: #25AAE2; -fx-background-radius: 20;" text="Delete">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <TextField alignment="CENTER" layoutX="200.0" layoutY="14.0" prefHeight="26.0" prefWidth="249.0" promptText=" Search for flight" style="-fx-background-color: #25AAE2; -fx-background-radius: 30; -fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;">
+      <TextField fx:id="searchFlight" alignment="CENTER" layoutX="200.0" layoutY="14.0" onKeyPressed="#keyPressed" prefHeight="26.0" prefWidth="249.0" promptText="Type Flight No." style="-fx-background-color: #25AAE2; -fx-background-radius: 30; -fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;">
          <font>
             <Font name="Arial" size="15.0" />
          </font></TextField>
