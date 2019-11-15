@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #29292D;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Delete">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: #29292D;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Delete">
    <children>
       <VBox layoutY="54.0" prefHeight="350.0" prefWidth="200.0">
          <children>
@@ -120,7 +120,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="Clas" layoutX="10.0" layoutY="269.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
+            <TextField fx:id="cls" layoutX="10.0" layoutY="269.0" style="-fx-background-color: #29292D; -fx-border-color: #4f67eb; -fx-border-width: 0 0 1 0; -fx-text-inner-color: #B2B2B2;">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>
@@ -131,7 +131,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <TextField fx:id="searchFlight" alignment="CENTER" layoutX="200.0" layoutY="14.0" onKeyPressed="#keyPressed" prefHeight="26.0" prefWidth="249.0" promptText="Type Flight No." style="-fx-background-color: #25AAE2; -fx-background-radius: 30; -fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;">
+      <TextField fx:id="searchFlight" alignment="CENTER" layoutX="200.0" layoutY="14.0" onKeyReleased="#keyPressed" prefHeight="26.0" prefWidth="249.0" promptText="Type Flight No." style="-fx-background-color: #25AAE2; -fx-background-radius: 30; -fx-text-inner-color: #000000; -fx-prompt-text-fill: #000000;">
          <font>
             <Font name="Arial" size="15.0" />
          </font></TextField>

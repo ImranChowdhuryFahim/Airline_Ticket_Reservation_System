@@ -9,14 +9,13 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
 
 public class Delete {
-
-    @FXML
-    private TextField searchFlight;
 
     @FXML
     private TextField FlightNO;
@@ -38,17 +37,35 @@ public class Delete {
 
     @FXML
     private TextField fare;
-    public String flighNoDelete;
+
     @FXML
-    private TextField Clas;
+    private TextField cls;
+
+    @FXML
+    private TextField searchFlight;
+
+    JSONArray JArray;
+
     JSONObject deleteJson;
+    public String flighNoDelete;
+
     @FXML
     void DeletePressed(ActionEvent event) {
-        deleteJson.remove("Destination");
-        deleteJson.remove("Fare");
-        System.out.println("o");
-    }
+        JArray.remove(JArray.indexOf(deleteJson));
+        try {
+            FileWriter f=new FileWriter("flightinfo.json");
+            f.write(JArray.toJSONString());
+            f.flush();
+            Toolkit.getDefaultToolkit().beep();
+            JOptionPane optionPane = new JOptionPane("Flight Info has been deleted successfully");
+            JDialog dialog = optionPane.createDialog("Message");
+            dialog.setAlwaysOnTop(true);
+            dialog.setVisible(true);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
+    }
 
     @FXML
     void keyPressed(KeyEvent event) {
@@ -60,8 +77,8 @@ public class Delete {
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
-        int i = 0;
-        JSONArray JArray = (JSONArray) obj;
+
+        JArray = (JSONArray) obj;
 
 
         for(Object x: JArray){
@@ -75,10 +92,13 @@ public class Delete {
                 DepartTime.setText(JsonObject.get("Departure Time").toString());
                 Arivaltime.setText(JsonObject.get("Arrival Time").toString());
                 fare.setText(JsonObject.get("Fare").toString());
-//                Clas.setText(JsonObject.get("Class").toString());
+                cls.setText(JsonObject.get("Class").toString());
                 deleteJson = JsonObject;
+                break;
+
             }
         }
+
 
     }
 
