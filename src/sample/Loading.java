@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
@@ -18,9 +19,9 @@ public class Loading implements Initializable {
 
     private AnchorPane root, twt;
 
-    @FXML
-    private Label loadinglb;
 
+    @FXML
+    private ProgressBar prgBar;
 
     public void load ()
     {
@@ -35,8 +36,11 @@ public class Loading implements Initializable {
                     int finalI1 = i;
                     Platform.runLater(() -> {
 
-                        if(finalI <= 10)
-                            loadinglb.setText(String.valueOf( 10 - finalI));
+                        if(finalI <= 10){
+                            double pr = finalI / 10.0;
+                            prgBar.setProgress(pr);
+                        }
+
 //                        System.out.println(finalI + "%");
                         else if(finalI1 >= 15){
 

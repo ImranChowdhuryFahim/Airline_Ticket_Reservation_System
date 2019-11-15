@@ -16,8 +16,17 @@
 }
 
 #taglabels1{
-    -fx-font-family: 'sans-serif';
+    -fx-font-family: "Comic Sans MS", cursive, sans-serif;
     -fx-font: 100;
+}
+
+#taglabels2{
+    -fx-font-family: "Comic Sans MS", cursive, sans-serif;
+    -fx-font: 100;
+}
+
+#topName{
+    -fx-font-family: 'Serif';
 }
 
 

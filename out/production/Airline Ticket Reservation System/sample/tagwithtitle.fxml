@@ -2,17 +2,21 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tagwithtitle">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tagwithtitle">
    <children>
-      <Label layoutX="99.0" layoutY="33.0" style="-fx-background-color: Black;" text="Ailrline Ticket Resevation System" textFill="#ebe8e8">
+      <Label id="topName" layoutX="99.0" layoutY="33.0" style="-fx-background-color: Black;" stylesheets="@Style.css" text="Ailrline Ticket Resevation System" textFill="#ebe8e8">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label id="taglabels2" layoutX="273.0" layoutY="110.0" stylesheets="@Style.css" text="Book your flights now in a single click" />
-      <Label id="taglabels1" layoutX="273.0" layoutY="82.0" stylesheets="@Style.css" text="Travelling just gets better with us" />
+      <Label id="taglabels2" layoutX="276.0" layoutY="103.0" stylesheets="@Style.css" text="Book your flights now in a single click" textFill="#f5f5f5" />
+      <Label id="taglabels1" layoutX="243.0" layoutY="76.0" stylesheets="@Style.css" text="Travelling just gets better with us" textFill="#f8f8f8" />
+      <Line endX="466.0" layoutX="115.0" layoutY="302.0" startX="-115.0" stroke="#ae9999" />
+      <Polyline fill="#383937" layoutX="89.0" layoutY="153.0" points="-50.0, -40.0, 447.0, -7.0, 0.0, 60.0, 149.0, -82.0" strokeType="INSIDE" />
+      <Line endX="-113.0" endY="-213.0" layoutX="140.0" layoutY="213.0" startX="-113.0" startY="187.0" stroke="#ae9999" />
    </children>
 </AnchorPane>
