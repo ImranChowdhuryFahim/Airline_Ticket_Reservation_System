@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Tagwithtitle">
+   <children>
+      <Label layoutX="99.0" layoutY="33.0" style="-fx-background-color: Black;" text="Ailrline Ticket Resevation System" textFill="#ebe8e8">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label id="taglabels2" layoutX="273.0" layoutY="110.0" stylesheets="@Style.css" text="Book your flights now in a single click" />
+      <Label id="taglabels1" layoutX="273.0" layoutY="82.0" stylesheets="@Style.css" text="Travelling just gets better with us" />
+   </children>
+</AnchorPane>
