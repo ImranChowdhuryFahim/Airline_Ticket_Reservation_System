@@ -70,7 +70,6 @@ public class Delete {
     @FXML
     void keyPressed(KeyEvent event) {
         String flightNo = searchFlight.getText();
-        System.out.println(flightNo);
         Object obj = null;
         try {
             obj = new JSONParser().parse(new FileReader("flightinfo.json"));
